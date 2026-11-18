@@ -1,0 +1,18 @@
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { createBrowserRouter, createHashRouter, RouterProvider } from 'react-router-dom';
+import '@fontsource-variable/inter';
+import './styles.css';
+import { RepositoryProvider } from './data/repository';
+import { FeedbackProvider } from './components/Feedback';
+import { Layout } from './components/Layout';
+import { Home } from './screens/Home';
+import { CourseEditScreen } from './components/CourseEditor';
+import { Course } from './screens/Course';
+import { Person } from './screens/Person';
+import { PersonEditor } from './screens/PersonEditor';
+import { NotFound } from './screens/NotFound';
+import { CourseCreate } from './screens/CourseCreate';
+const createRouter = import.meta.env.BASE_URL === '/' ? createBrowserRouter : createHashRouter;
+const router = createRouter([{ element: <Layout/>, children: [{ index: true, id: 'home', element: <Home/> }, { path: 'courses/new', element: <CourseCreate/> }, { path: 'courses/:id/edit', element: <CourseEditScreen/> }, { path: 'courses/:id', element: <Course/> }, { path: 'people/new', element: <PersonEditor/> }, { path: 'people/:id', element: <Person/> }, { path: 'people/:id/edit', element: <PersonEditor/> }, { path: '*', element: <NotFound/> }] }]);
+ReactDOM.createRoot(document.getElementById('root')!).render(<React.StrictMode><RepositoryProvider><FeedbackProvider><a className="skip-link" href="#main">Перейти к содержимому</a><RouterProvider router={router}/></FeedbackProvider></RepositoryProvider></React.StrictMode>);

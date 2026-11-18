@@ -1,0 +1,814 @@
+const imgChevronSelectorVertical = "https://www.figma.com/api/mcp/asset/a8981e78-df78-46ba-84c8-79bdc6840627.svg";
+const imgChelovekVOchkah = "https://www.figma.com/api/mcp/asset/78874ef4-e75d-400d-806b-dc7cccb36b16.png";
+const imgImgFemale = "https://www.figma.com/api/mcp/asset/748ebb1e-1d47-4e9e-b1c0-256f2866d697.png";
+const imgCheckCircle = "https://www.figma.com/api/mcp/asset/99a40f17-1d5b-4d7a-a907-8cd03bc622db.svg";
+const imgStatus = "https://www.figma.com/api/mcp/asset/4efb3a83-8373-49fe-9d2f-ba9929a070c0.svg";
+const imgStatus1 = "https://www.figma.com/api/mcp/asset/4d33d250-fb4f-446f-a18e-050a3c5bf3e9.svg";
+const imgCheckCircle1 = "https://www.figma.com/api/mcp/asset/8ad42b87-23d7-43d1-bd94-695f3ce147ca.svg";
+const imgChevronLeft = "https://www.figma.com/api/mcp/asset/be466a55-5680-49bb-870e-892dee4fb77e.svg";
+const imgChevronRight = "https://www.figma.com/api/mcp/asset/b2efd8ee-b557-4928-be1d-78ca8e255b37.svg";
+
+type SpacerDeprecatedProps = {
+  className?: string;
+  orientation?: "Horizontal" | "Vertical";
+  size?: "1px | 0.063rem" | "8px | 0.5rem" | "12px | 0.75rem";
+  visible?: "Off";
+};
+
+function SpacerDeprecated({ className, orientation = "Vertical", size = "1px | 0.063rem", visible = "Off" }: SpacerDeprecatedProps) {
+  const is12Px075RemAndHorizontalAndOff = size === "12px | 0.75rem" && orientation === "Horizontal" && visible === "Off";
+  const is12Px075RemAndVerticalAndOff = size === "12px | 0.75rem" && orientation === "Vertical" && visible === "Off";
+  const is8Px05RemAndVerticalAndOff = size === "8px | 0.5rem" && orientation === "Vertical" && visible === "Off";
+  return <div className={className || `overflow-clip relative ${is12Px075RemAndVerticalAndOff ? "h-[384px] max-w-[12px] min-w-[12px] w-[12px]" : is12Px075RemAndHorizontalAndOff ? "h-[12px] max-h-[12px] min-h-[12px] w-[384px]" : is8Px05RemAndVerticalAndOff ? "h-[384px] max-w-[8px] min-w-[8px] w-[8px]" : "h-[384px] max-w-px min-w-px w-px"}`} id={is12Px075RemAndVerticalAndOff ? "node-3430_63262" : is12Px075RemAndHorizontalAndOff ? "node-3430_63235" : is8Px05RemAndVerticalAndOff ? "node-3430_63232" : "node-3430_63224"} />;
+}
+
+type SortingProps = {
+  className?: string;
+  state?: "Normal";
+  type?: "Sorting";
+};
+
+function Sorting({ className, state = "Normal", type = "Sorting" }: SortingProps) {
+  return (
+    <div className={className || "content-stretch flex items-start overflow-clip relative"} data-node-id="3682:61695">
+      <div className="relative shrink-0 size-[16px]" data-node-id="3682:61696" data-name="chevron-selector-vertical">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgChevronSelectorVertical} />
+      </div>
+    </div>
+  );
+}
+
+export default function Content() {
+  return (
+    <div className="content-stretch flex flex-col items-start relative size-full" data-node-id="6862:3046" data-name="content">
+      <div className="content-stretch flex flex-col gap-[8px] items-start relative shrink-0 w-[1272px]" data-node-id="6645:133193" data-name="table">
+        <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="6645:134012" data-name="table">
+          <div className="border-[var(--border\/normal\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex items-center px-[var(--global-dimensions\/0-px-\|-0-rem,0px)] relative shrink-0 w-full" data-node-id="6645:134013" data-name="header">
+            <div className="border-0 border-[var(--border\/border-normal,#cdcfd2)] border-solid content-stretch flex h-[48px] items-center relative shrink-0 w-[264px]" data-node-id="6645:134014" data-name="table-header">
+              <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I6645:134014;416:613" data-name="Container">
+                <SpacerDeprecated className="h-[12px] max-h-[12px] min-h-[12px] relative shrink-0 w-full" orientation="Horizontal" size="12px | 0.75rem" />
+                <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="I6645:134014;416:615" data-name="Content">
+                  <div className="content-stretch flex gap-[4px] h-[24px] items-center relative shrink-0" data-node-id="I6645:134014;416:617" data-name="Text + Sort icon">
+                    <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-tertiary\/text-tertiary\/text-tertiary-normal,#8a8e93)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I6645:134014;416:618">
+                      Курсы
+                    </p>
+                  </div>
+                </div>
+                <SpacerDeprecated className="h-[12px] max-h-[12px] min-h-[12px] relative shrink-0 w-full" orientation="Horizontal" size="12px | 0.75rem" />
+              </div>
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+            </div>
+            <div className="border-0 border-[var(--border\/border-normal,#cdcfd2)] border-solid content-stretch flex h-[48px] items-center relative shrink-0 w-[240px]" data-node-id="6645:134015" data-name="table-header">
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I6645:134015;416:613" data-name="Container">
+                <SpacerDeprecated className="h-[12px] max-h-[12px] min-h-[12px] relative shrink-0 w-full" orientation="Horizontal" size="12px | 0.75rem" />
+                <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="I6645:134015;416:615" data-name="Content">
+                  <div className="content-stretch flex gap-[4px] h-[24px] items-center relative shrink-0" data-node-id="I6645:134015;416:617" data-name="Text + Sort icon">
+                    <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-tertiary\/text-tertiary\/text-tertiary-normal,#8a8e93)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I6645:134015;416:618">
+                      Лид курса
+                    </p>
+                  </div>
+                </div>
+                <SpacerDeprecated className="h-[12px] max-h-[12px] min-h-[12px] relative shrink-0 w-full" orientation="Horizontal" size="12px | 0.75rem" />
+              </div>
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+            </div>
+            <div className="border-0 border-[var(--border\/border-normal,#cdcfd2)] border-solid content-stretch flex h-[48px] items-center relative shrink-0 w-[64px]" data-node-id="6862:10657" data-name="table-header">
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I6862:10657;416:613" data-name="Container">
+                <SpacerDeprecated className="h-[12px] max-h-[12px] min-h-[12px] relative shrink-0 w-full" orientation="Horizontal" size="12px | 0.75rem" />
+                <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="I6862:10657;416:615" data-name="Content">
+                  <div className="content-stretch flex gap-[4px] h-[24px] items-center relative shrink-0" data-node-id="I6862:10657;416:617" data-name="Text + Sort icon">
+                    <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[14px] text-[color:var(--text\/text-tertiary\/text-tertiary\/text-tertiary-normal,#8a8e93)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I6862:10657;416:618">
+                      ​
+                    </p>
+                  </div>
+                </div>
+                <SpacerDeprecated className="h-[12px] max-h-[12px] min-h-[12px] relative shrink-0 w-full" orientation="Horizontal" size="12px | 0.75rem" />
+              </div>
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+            </div>
+            <div className="border-0 border-[var(--border\/border-normal,#cdcfd2)] border-solid content-stretch flex h-[48px] items-center relative shrink-0 w-[100px]" data-node-id="6645:134016" data-name="table-header">
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I6645:134016;416:613" data-name="Container">
+                <SpacerDeprecated className="h-[12px] max-h-[12px] min-h-[12px] relative shrink-0 w-full" orientation="Horizontal" size="12px | 0.75rem" />
+                <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="I6645:134016;416:615" data-name="Content">
+                  <div className="content-stretch flex gap-[4px] h-[24px] items-center relative shrink-0" data-node-id="I6645:134016;416:617" data-name="Text + Sort icon">
+                    <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-tertiary\/text-tertiary\/text-tertiary-normal,#8a8e93)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I6645:134016;416:618">
+                      Год
+                    </p>
+                    <Sorting className="content-stretch flex items-start overflow-clip relative shrink-0" />
+                  </div>
+                </div>
+                <SpacerDeprecated className="h-[12px] max-h-[12px] min-h-[12px] relative shrink-0 w-full" orientation="Horizontal" size="12px | 0.75rem" />
+              </div>
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+            </div>
+            <div className="border-0 border-[var(--border\/border-normal,#cdcfd2)] border-solid content-stretch flex h-[48px] items-center relative shrink-0 w-[100px]" data-node-id="6645:134017" data-name="table-header">
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I6645:134017;416:613" data-name="Container">
+                <SpacerDeprecated className="h-[12px] max-h-[12px] min-h-[12px] relative shrink-0 w-full" orientation="Horizontal" size="12px | 0.75rem" />
+                <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="I6645:134017;416:615" data-name="Content">
+                  <div className="content-stretch flex gap-[4px] h-[24px] items-center relative shrink-0" data-node-id="I6645:134017;416:617" data-name="Text + Sort icon">
+                    <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-tertiary\/text-tertiary\/text-tertiary-normal,#8a8e93)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I6645:134017;416:618">
+                      Семестр
+                    </p>
+                  </div>
+                </div>
+                <SpacerDeprecated className="h-[12px] max-h-[12px] min-h-[12px] relative shrink-0 w-full" orientation="Horizontal" size="12px | 0.75rem" />
+              </div>
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+            </div>
+            <div className="border-0 border-[var(--border\/border-normal,#cdcfd2)] border-solid content-stretch flex h-[48px] items-center relative shrink-0 w-[120px]" data-node-id="6645:134019" data-name="table-header">
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I6645:134019;416:613" data-name="Container">
+                <SpacerDeprecated className="h-[12px] max-h-[12px] min-h-[12px] relative shrink-0 w-full" orientation="Horizontal" size="12px | 0.75rem" />
+                <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="I6645:134019;416:615" data-name="Content">
+                  <div className="content-stretch flex gap-[4px] h-[24px] items-center relative shrink-0" data-node-id="I6645:134019;416:617" data-name="Text + Sort icon">
+                    <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-tertiary\/text-tertiary\/text-tertiary-normal,#8a8e93)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I6645:134019;416:618">
+                      Уровень
+                    </p>
+                  </div>
+                </div>
+                <SpacerDeprecated className="h-[12px] max-h-[12px] min-h-[12px] relative shrink-0 w-full" orientation="Horizontal" size="12px | 0.75rem" />
+              </div>
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+            </div>
+            <div className="border-0 border-[var(--border\/border-normal,#cdcfd2)] border-solid content-stretch flex h-[48px] items-center relative shrink-0 w-[140px]" data-node-id="6645:134018" data-name="table-header">
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I6645:134018;416:613" data-name="Container">
+                <SpacerDeprecated className="h-[12px] max-h-[12px] min-h-[12px] relative shrink-0 w-full" orientation="Horizontal" size="12px | 0.75rem" />
+                <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="I6645:134018;416:615" data-name="Content">
+                  <div className="content-stretch flex gap-[4px] h-[24px] items-center relative shrink-0" data-node-id="I6645:134018;416:617" data-name="Text + Sort icon">
+                    <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-tertiary\/text-tertiary\/text-tertiary-normal,#8a8e93)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I6645:134018;416:618">
+                      Статус
+                    </p>
+                  </div>
+                </div>
+                <SpacerDeprecated className="h-[12px] max-h-[12px] min-h-[12px] relative shrink-0 w-full" orientation="Horizontal" size="12px | 0.75rem" />
+              </div>
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+            </div>
+            <div className="border-0 border-[var(--border\/border-normal,#cdcfd2)] border-solid content-stretch flex h-[48px] items-center relative shrink-0 w-[80px]" data-node-id="6645:134021" data-name="table-header">
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I6645:134021;416:613" data-name="Container">
+                <SpacerDeprecated className="h-[12px] max-h-[12px] min-h-[12px] relative shrink-0 w-full" orientation="Horizontal" size="12px | 0.75rem" />
+                <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="I6645:134021;416:615" data-name="Content">
+                  <div className="content-stretch flex gap-[4px] h-[24px] items-center relative shrink-0" data-node-id="I6645:134021;416:617" data-name="Text + Sort icon">
+                    <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-tertiary\/text-tertiary\/text-tertiary-normal,#8a8e93)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I6645:134021;416:618">
+                      План
+                    </p>
+                  </div>
+                </div>
+                <SpacerDeprecated className="h-[12px] max-h-[12px] min-h-[12px] relative shrink-0 w-full" orientation="Horizontal" size="12px | 0.75rem" />
+              </div>
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+            </div>
+            <div className="border-0 border-[var(--border\/border-normal,#cdcfd2)] border-solid content-stretch flex h-[48px] items-center relative shrink-0 w-[80px]" data-node-id="6645:134022" data-name="table-header">
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I6645:134022;416:613" data-name="Container">
+                <SpacerDeprecated className="h-[12px] max-h-[12px] min-h-[12px] relative shrink-0 w-full" orientation="Horizontal" size="12px | 0.75rem" />
+                <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="I6645:134022;416:615" data-name="Content">
+                  <div className="content-stretch flex gap-[4px] h-[24px] items-center relative shrink-0" data-node-id="I6645:134022;416:617" data-name="Text + Sort icon">
+                    <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-tertiary\/text-tertiary\/text-tertiary-normal,#8a8e93)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I6645:134022;416:618">
+                      Факт
+                    </p>
+                  </div>
+                </div>
+                <SpacerDeprecated className="h-[12px] max-h-[12px] min-h-[12px] relative shrink-0 w-full" orientation="Horizontal" size="12px | 0.75rem" />
+              </div>
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+            </div>
+            <div className="border-0 border-[var(--border\/border-normal,#cdcfd2)] border-solid content-stretch flex h-[48px] items-center relative shrink-0 w-[80px]" data-node-id="6645:134020" data-name="table-header">
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I6645:134020;416:613" data-name="Container">
+                <SpacerDeprecated className="h-[12px] max-h-[12px] min-h-[12px] relative shrink-0 w-full" orientation="Horizontal" size="12px | 0.75rem" />
+                <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="I6645:134020;416:615" data-name="Content">
+                  <div className="content-stretch flex gap-[4px] h-[24px] items-center relative shrink-0" data-node-id="I6645:134020;416:617" data-name="Text + Sort icon">
+                    <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-tertiary\/text-tertiary\/text-tertiary-normal,#8a8e93)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I6645:134020;416:618">
+                      Открыто
+                    </p>
+                  </div>
+                </div>
+                <SpacerDeprecated className="h-[12px] max-h-[12px] min-h-[12px] relative shrink-0 w-full" orientation="Horizontal" size="12px | 0.75rem" />
+              </div>
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+            </div>
+          </div>
+          <div className="bg-[var(--base\/page-backgrounds-and-elevations\/normal\/base-elevation-02,white)] content-stretch flex items-center relative shrink-0 w-full" data-node-id="6645:134023" data-name="table-row">
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134026">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[264px]" data-name="table-cell-text">
+                <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="I6645:134026;203:7142" data-name="Wrapper">
+                  <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134026;203:7144">
+                    Бизнес математика
+                  </p>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134027">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[12px] relative shrink-0 w-[240px]" data-name="table-cell-avatar">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-stretch flex flex-[1_0_0] items-center min-w-px relative" data-node-id="I6645:134027;319:26984" data-name="Wrapper">
+                  <div className="overflow-clip relative rounded-[var(--rounds\/round-max,100000px)] shrink-0 size-[24px]" data-node-id="I6645:134027;319:26985" data-name="avatar">
+                    <div className="absolute bg-[#f9dfb6] inset-0" data-node-id="I6645:134027;319:26985;32:584" data-name="img-male">
+                      <div className="-translate-x-1/2 absolute aspect-[150/150] bottom-0 left-1/2 top-0" data-node-id="I6645:134027;319:26985;32:584;201:193" data-name="Chelovek v ochkah">
+                        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                          <img alt="" className="absolute left-0 max-w-none size-full top-0" src={imgChelovekVOchkah} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <SpacerDeprecated className="flex flex-row items-center self-stretch" size="8px | 0.5rem" />
+                  <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] min-w-px relative text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)]" data-node-id="I6645:134027;319:26987">
+                    Смирнов Алексей Петрович
+                  </p>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6862:10670">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[64px]" data-name="table-cell-status">
+                <SpacerDeprecated className="h-full max-w-[8px] min-w-[8px] relative shrink-0 w-[8px]" size="8px | 0.5rem" />
+                <div className="content-stretch flex flex-[1_0_0] gap-[4px] items-center min-w-px opacity-0 relative" data-node-id="I6862:10670;235:3347" data-name="Wrapper">
+                  <div className="relative shrink-0 size-[18px]" data-node-id="I6862:10670;235:3534" data-name="check-circle">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCheckCircle} />
+                  </div>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[8px] min-w-[8px] relative shrink-0 w-[8px]" size="8px | 0.5rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134028">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[100px]" data-name="table-cell-text">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="I6645:134028;203:7142" data-name="Wrapper">
+                  <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134028;203:7144">
+                    2026
+                  </p>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134029">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[100px]" data-name="table-cell-text">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="I6645:134029;203:7142" data-name="Wrapper">
+                  <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134029;203:7144">
+                    Осень
+                  </p>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134031">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[120px]" data-name="table-cell-chips">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-center flex flex-[1_0_0] flex-wrap gap-[4px] items-center min-w-px relative" data-node-id="I6645:134031;364:1335" data-name="Wrapper">
+                  <div className="bg-[var(--support-pale\/categorical-06-pale,rgba(136,119,251,0.24))] content-stretch flex items-center justify-center px-[4px] py-px relative rounded-[var(--round\/round-xs,4px)] shrink-0" data-node-id="I6645:134031;364:1336" data-name="badge-support-01">
+                    <div className="[word-break:break-word] flex flex-col font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal justify-center leading-[0] opacity-80 relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-xs\/body-xs-font-size,12px)] text-center tracking-[var(--typography\/font-size\/body\/body-xs\/body-xs-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I6645:134031;364:1336;353:1245">
+                      <p className="leading-[var(--typography\/font-size\/body\/body-xs\/body-xs-font-line_height,18px)]">ДПО</p>
+                    </div>
+                  </div>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134030">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[140px]" data-name="table-cell-chips">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-center flex flex-[1_0_0] flex-wrap gap-[4px] items-center min-w-px relative" data-node-id="I6645:134030;364:1335" data-name="Wrapper">
+                  <div className="bg-[var(--base\/base-service\/info\/base-info-pale-normal,#ecfdff)] content-stretch flex gap-[var(--global-dimensions\/2-px-\|-0\,12-rem,2px)] items-center justify-center pl-[var(--global-dimensions\/4-px-\|-0\,25-rem,4px)] pr-[var(--global-dimensions\/6-px-\|-0\,375-rem,6px)] py-[var(--global-dimensions\/1-px-\|-0\,063-rem,1px)] relative rounded-[var(--component\/badge\/badge-3xs\/badge-3xs-corner-radius,4px)] shrink-0" data-node-id="I6645:134030;364:1336" data-name="badge-support-01">
+                    <div className="relative shrink-0 size-[12px]" data-node-id="I6645:134030;364:1336;461:3932" data-name="Status">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgStatus} />
+                    </div>
+                    <div className="[word-break:break-word] flex flex-col font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal justify-center leading-[0] relative shrink-0 text-[color:var(--text\/text-service\/text-info-normal,#0e7090)] text-[length:var(--typography\/font-sizes\/body\/body-xs\/body-xs-font-size,12px)] text-center tracking-[var(--typography\/font-sizes\/body\/body-xs\/body-xs-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I6645:134030;364:1336;461:3935">
+                      <p className="leading-[var(--typography\/font-sizes\/body\/body-xs\/body-xs-font-line_height,18px)]">Идет набор</p>
+                    </div>
+                  </div>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134033">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[80px]" data-name="table-cell-text">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="I6645:134033;203:7142" data-name="Wrapper">
+                  <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134033;203:7144">
+                    60
+                  </p>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134034">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[80px]" data-name="table-cell-text">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-stretch flex flex-col items-start justify-center relative shrink-0" data-node-id="I6645:134034;203:7142" data-name="Wrapper">
+                  <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134034;203:7144">
+                    65
+                  </p>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134032">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[80px]" data-name="table-cell-text">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="I6645:134032;203:7142" data-name="Wrapper">
+                  <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134032;203:7144">
+                    100
+                  </p>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+          </div>
+          <div className="bg-[var(--base\/page-backgrounds-and-elevations\/normal\/base-elevation-02,white)] content-stretch flex items-center relative shrink-0 w-full" data-node-id="6645:134035" data-name="table-row">
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134038">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[264px]" data-name="table-cell-text">
+                <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="I6645:134038;203:7142" data-name="Wrapper">
+                  <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134038;203:7144">
+                    Базы данных
+                  </p>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134039">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[12px] relative shrink-0 w-[240px]" data-name="table-cell-avatar">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-stretch flex flex-[1_0_0] items-center min-w-px relative" data-node-id="I6645:134039;319:26984" data-name="Wrapper">
+                  <div className="overflow-clip relative rounded-[var(--rounds\/round-max,100000px)] shrink-0 size-[24px]" data-node-id="I6645:134039;319:26985" data-name="avatar">
+                    <div className="absolute inset-0" data-node-id="I6645:134039;319:26985;32:584" data-name="img-female">
+                      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImgFemale} />
+                    </div>
+                  </div>
+                  <SpacerDeprecated className="flex flex-row items-center self-stretch" size="8px | 0.5rem" />
+                  <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] min-w-px relative text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)]" data-node-id="I6645:134039;319:26987">
+                    Кузнецова Елена Сергеевна
+                  </p>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6950:101915">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[64px]" data-name="table-cell-status">
+                <SpacerDeprecated className="h-full max-w-[8px] min-w-[8px] relative shrink-0 w-[8px]" size="8px | 0.5rem" />
+                <div className="content-stretch flex flex-[1_0_0] gap-[4px] items-center min-w-px relative" data-node-id="I6950:101915;235:3347" data-name="Wrapper">
+                  <div className="relative shrink-0 size-[18px]" data-node-id="I6950:101915;235:3534" data-name="check-circle">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCheckCircle} />
+                  </div>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[8px] min-w-[8px] relative shrink-0 w-[8px]" size="8px | 0.5rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134040">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[100px]" data-name="table-cell-text">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="I6645:134040;203:7142" data-name="Wrapper">
+                  <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134040;203:7144">
+                    2025
+                  </p>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134041">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[100px]" data-name="table-cell-text">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="I6645:134041;203:7142" data-name="Wrapper">
+                  <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134041;203:7144">
+                    Зима
+                  </p>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134043">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[120px]" data-name="table-cell-chips">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-center flex flex-[1_0_0] flex-wrap gap-[4px] items-center min-w-px relative" data-node-id="I6645:134043;364:1335" data-name="Wrapper">
+                  <div className="bg-[var(--support-pale\/categorical-12-pale,rgba(96,135,220,0.24))] content-stretch flex items-center justify-center px-[4px] py-px relative rounded-[var(--round\/round-xs,4px)] shrink-0" data-node-id="I6645:134043;364:1336" data-name="badge-support-01">
+                    <div className="[word-break:break-word] flex flex-col font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal justify-center leading-[0] opacity-80 relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-xs\/body-xs-font-size,12px)] text-center tracking-[var(--typography\/font-size\/body\/body-xs\/body-xs-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I6645:134043;364:1336;353:1247">
+                      <p className="leading-[var(--typography\/font-size\/body\/body-xs\/body-xs-font-line_height,18px)]">МАГ</p>
+                    </div>
+                  </div>
+                  <div className="bg-[var(--support-pale\/categorical-20-pale,rgba(163,206,110,0.24))] content-stretch flex items-center justify-center px-[4px] py-px relative rounded-[var(--round\/round-xs,4px)] shrink-0" data-node-id="I6645:134043;364:1337" data-name="badge-support-02">
+                    <div className="[word-break:break-word] flex flex-col font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal justify-center leading-[0] opacity-80 relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-xs\/body-xs-font-size,12px)] text-center tracking-[var(--typography\/font-size\/body\/body-xs\/body-xs-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I6645:134043;364:1337;353:1269">
+                      <p className="leading-[var(--typography\/font-size\/body\/body-xs\/body-xs-font-line_height,18px)]">БАК</p>
+                    </div>
+                  </div>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134042">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[140px]" data-name="table-cell-chips">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-center flex flex-[1_0_0] flex-wrap gap-[4px] items-center min-w-px relative" data-node-id="I6645:134042;364:1335" data-name="Wrapper">
+                  <div className="bg-[var(--base\/base-service\/positive\/base-positive-pale-normal,#d0fae5)] content-stretch flex gap-[var(--global-dimensions\/2-px-\|-0\,12-rem,2px)] items-center justify-center pl-[var(--global-dimensions\/4-px-\|-0\,25-rem,4px)] pr-[var(--global-dimensions\/6-px-\|-0\,375-rem,6px)] py-[var(--global-dimensions\/1-px-\|-0\,063-rem,1px)] relative rounded-[var(--component\/badge\/badge-3xs\/badge-3xs-corner-radius,4px)] shrink-0" data-node-id="I6645:134042;364:1336" data-name="badge-support-01">
+                    <div className="relative shrink-0 size-[12px]" data-node-id="I6645:134042;364:1336;461:3583" data-name="Status">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgStatus1} />
+                    </div>
+                    <div className="[word-break:break-word] flex flex-col font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal justify-center leading-[0] relative shrink-0 text-[color:var(--text\/text-service\/text-positive-normal,#007a55)] text-[length:var(--typography\/font-sizes\/body\/body-xs\/body-xs-font-size,12px)] text-center tracking-[var(--typography\/font-sizes\/body\/body-xs\/body-xs-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I6645:134042;364:1336;461:3586">
+                      <p className="leading-[var(--typography\/font-sizes\/body\/body-xs\/body-xs-font-line_height,18px)]">Комплект</p>
+                    </div>
+                  </div>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134045">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[80px]" data-name="table-cell-text">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="I6645:134045;203:7142" data-name="Wrapper">
+                  <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134045;203:7144">
+                    —
+                  </p>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134046">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[80px]" data-name="table-cell-text">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="I6645:134046;203:7142" data-name="Wrapper">
+                  <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134046;203:7144">
+                    —
+                  </p>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134044">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[80px]" data-name="table-cell-text">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="I6645:134044;203:7142" data-name="Wrapper">
+                  <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134044;203:7144">
+                    —
+                  </p>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+          </div>
+          <div className="bg-[var(--base\/page-backgrounds-and-elevations\/normal\/base-elevation-02,white)] content-stretch flex items-center relative shrink-0 w-full" data-node-id="6645:134047" data-name="table-row">
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134050">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[264px]" data-name="table-cell-text">
+                <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="I6645:134050;203:7142" data-name="Wrapper">
+                  <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] overflow-hidden relative shrink-0 text-[14px] text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-ellipsis tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full whitespace-nowrap" data-node-id="I6645:134050;203:7144">
+                    Финансовая математика
+                  </p>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex items-start py-[12px] relative shrink-0 w-[240px]" data-node-id="6645:134051" data-name="table-cell-avatar">
+              <SpacerDeprecated className="max-w-[12px] min-w-[12px] relative self-stretch shrink-0 w-[12px]" size="12px | 0.75rem" />
+              <div className="content-stretch flex flex-[1_0_0] items-center min-w-px relative" data-node-id="I6645:134051;319:26984" data-name="Wrapper">
+                <div className="overflow-clip relative rounded-[var(--rounds\/round-max,100000px)] shrink-0 size-[24px]" data-node-id="I6645:134051;319:26985" data-name="avatar">
+                  <div className="absolute bg-[#f9dfb6] inset-0" data-node-id="I6645:134051;319:26985;32:584" data-name="img-male">
+                    <div className="-translate-x-1/2 absolute aspect-[150/150] bottom-0 left-1/2 top-0" data-node-id="I6645:134051;319:26985;32:584;201:193" data-name="Chelovek v ochkah">
+                      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+                        <img alt="" className="absolute left-0 max-w-none size-full top-0" src={imgChelovekVOchkah} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <SpacerDeprecated className="flex flex-row items-center self-stretch" size="8px | 0.5rem" />
+                <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] min-w-px relative text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)]" data-node-id="I6645:134051;319:26987">
+                  Попов Дмитрий Александрович
+                </p>
+              </div>
+              <SpacerDeprecated className="max-w-[12px] min-w-[12px] relative self-stretch shrink-0 w-[12px]" size="12px | 0.75rem" />
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6862:10688">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[64px]" data-name="table-cell-status">
+                <SpacerDeprecated className="h-full max-w-[8px] min-w-[8px] relative shrink-0 w-[8px]" size="8px | 0.5rem" />
+                <div className="content-stretch flex flex-[1_0_0] gap-[4px] items-center min-w-px relative" data-node-id="I6862:10688;235:3347" data-name="Wrapper">
+                  <div className="relative shrink-0 size-[18px]" data-node-id="I6862:10688;235:3534" data-name="check-circle">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCheckCircle} />
+                  </div>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[8px] min-w-[8px] relative shrink-0 w-[8px]" size="8px | 0.5rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134052">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[100px]" data-name="table-cell-text">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="I6645:134052;203:7142" data-name="Wrapper">
+                  <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134052;203:7144">
+                    2026
+                  </p>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134053">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[100px]" data-name="table-cell-text">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="I6645:134053;203:7142" data-name="Wrapper">
+                  <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134053;203:7144">
+                    Весна
+                  </p>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134055">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[120px]" data-name="table-cell-chips">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-center flex flex-[1_0_0] flex-wrap gap-[4px] items-center min-w-px relative" data-node-id="I6645:134055;364:1335" data-name="Wrapper">
+                  <div className="bg-[var(--support-pale\/categorical-06-pale,rgba(136,119,251,0.24))] content-stretch flex items-center justify-center px-[4px] py-px relative rounded-[var(--round\/round-xs,4px)] shrink-0" data-node-id="I6645:134055;364:1336" data-name="badge-support-01">
+                    <div className="[word-break:break-word] flex flex-col font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal justify-center leading-[0] opacity-80 relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-xs\/body-xs-font-size,12px)] text-center tracking-[var(--typography\/font-size\/body\/body-xs\/body-xs-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I6645:134055;364:1336;353:1245">
+                      <p className="leading-[var(--typography\/font-size\/body\/body-xs\/body-xs-font-line_height,18px)]">ДПО</p>
+                    </div>
+                  </div>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134054">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[140px]" data-name="table-cell-chips">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-center flex flex-[1_0_0] flex-wrap gap-[4px] items-center min-w-px relative" data-node-id="I6645:134054;364:1335" data-name="Wrapper">
+                  <div className="bg-[var(--base\/base-service\/info\/base-info-pale-normal,#ecfdff)] content-stretch flex gap-[var(--global-dimensions\/2-px-\|-0\,12-rem,2px)] items-center justify-center pl-[var(--global-dimensions\/4-px-\|-0\,25-rem,4px)] pr-[var(--global-dimensions\/6-px-\|-0\,375-rem,6px)] py-[var(--global-dimensions\/1-px-\|-0\,063-rem,1px)] relative rounded-[var(--component\/badge\/badge-3xs\/badge-3xs-corner-radius,4px)] shrink-0" data-node-id="I6645:134054;364:1336" data-name="badge-support-01">
+                    <div className="relative shrink-0 size-[12px]" data-node-id="I6645:134054;364:1336;461:3932" data-name="Status">
+                      <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgStatus} />
+                    </div>
+                    <div className="[word-break:break-word] flex flex-col font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal justify-center leading-[0] relative shrink-0 text-[color:var(--text\/text-service\/text-info-normal,#0e7090)] text-[length:var(--typography\/font-sizes\/body\/body-xs\/body-xs-font-size,12px)] text-center tracking-[var(--typography\/font-sizes\/body\/body-xs\/body-xs-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I6645:134054;364:1336;461:3935">
+                      <p className="leading-[var(--typography\/font-sizes\/body\/body-xs\/body-xs-font-line_height,18px)]">Идет набор</p>
+                    </div>
+                  </div>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134057">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[80px]" data-name="table-cell-text">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="I6645:134057;203:7142" data-name="Wrapper">
+                  <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134057;203:7144">
+                    80
+                  </p>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134058">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[80px]" data-name="table-cell-text">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-stretch flex flex-col items-start justify-center relative shrink-0" data-node-id="I6645:134058;203:7142" data-name="Wrapper">
+                  <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134058;203:7144">
+                    74
+                  </p>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+            <div className="flex flex-row items-center self-stretch" data-node-id="6645:134056">
+              <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[80px]" data-name="table-cell-text">
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+                <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="I6645:134056;203:7142" data-name="Wrapper">
+                  <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134056;203:7144">
+                    30
+                  </p>
+                </div>
+                <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              </div>
+            </div>
+          </div>
+          <div className="bg-[var(--base\/page-backgrounds-and-elevations\/normal\/base-elevation-02,white)] content-stretch flex h-[90px] items-center relative shrink-0 w-full" data-node-id="6645:134059" data-name="table-row">
+            <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[264px]" data-node-id="6645:134062" data-name="table-cell-text">
+              <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="I6645:134062;203:7142" data-name="Wrapper">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134062;203:7144">
+                  Финансовый и стратегический менеджмент в продуктовом управлении
+                </p>
+              </div>
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+            </div>
+            <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[12px] relative shrink-0 w-[240px]" data-node-id="6645:134063" data-name="table-cell-avatar">
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              <div className="content-stretch flex flex-[1_0_0] items-center min-w-px relative" data-node-id="I6645:134063;319:26984" data-name="Wrapper">
+                <div className="overflow-clip relative rounded-[var(--rounds\/round-max,100000px)] shrink-0 size-[24px]" data-node-id="I6645:134063;319:26985" data-name="avatar">
+                  <div className="absolute inset-0" data-node-id="I6645:134063;319:26985;32:584" data-name="img-female">
+                    <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgImgFemale} />
+                  </div>
+                </div>
+                <SpacerDeprecated className="flex flex-row items-center self-stretch" size="8px | 0.5rem" />
+                <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] min-w-px relative text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)]" data-node-id="I6645:134063;319:26987">
+                  Васильева Наталья Владимировна
+                </p>
+              </div>
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+            </div>
+            <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[64px]" data-node-id="6862:10697" data-name="table-cell-status">
+              <SpacerDeprecated className="h-full max-w-[8px] min-w-[8px] relative shrink-0 w-[8px]" size="8px | 0.5rem" />
+              <div className="content-stretch flex flex-[1_0_0] gap-[4px] items-center min-w-px opacity-0 relative" data-node-id="I6862:10697;235:3347" data-name="Wrapper">
+                <div className="relative shrink-0 size-[18px]" data-node-id="I6862:10697;235:3534" data-name="check-circle">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCheckCircle1} />
+                </div>
+              </div>
+              <SpacerDeprecated className="h-full max-w-[8px] min-w-[8px] relative shrink-0 w-[8px]" size="8px | 0.5rem" />
+            </div>
+            <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[100px]" data-node-id="6645:134064" data-name="table-cell-text">
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="I6645:134064;203:7142" data-name="Wrapper">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134064;203:7144">
+                  2025
+                </p>
+              </div>
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+            </div>
+            <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[100px]" data-node-id="6645:134065" data-name="table-cell-text">
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="I6645:134065;203:7142" data-name="Wrapper">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134065;203:7144">
+                  Осень
+                </p>
+              </div>
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+            </div>
+            <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[120px]" data-node-id="6645:134067" data-name="table-cell-chips">
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              <div className="content-center flex flex-[1_0_0] flex-wrap gap-[4px] items-center min-w-px relative" data-node-id="I6645:134067;364:1335" data-name="Wrapper">
+                <div className="bg-[var(--support-pale\/categorical-20-pale,rgba(163,206,110,0.24))] content-stretch flex items-center justify-center px-[4px] py-px relative rounded-[var(--round\/round-xs,4px)] shrink-0" data-node-id="I6645:134067;364:1336" data-name="badge-support-01">
+                  <div className="[word-break:break-word] flex flex-col font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal justify-center leading-[0] opacity-80 relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-xs\/body-xs-font-size,12px)] text-center tracking-[var(--typography\/font-size\/body\/body-xs\/body-xs-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I6645:134067;364:1336;353:1269">
+                    <p className="leading-[var(--typography\/font-size\/body\/body-xs\/body-xs-font-line_height,18px)]">БАК</p>
+                  </div>
+                </div>
+              </div>
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+            </div>
+            <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[140px]" data-node-id="6645:134066" data-name="table-cell-chips">
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              <div className="content-center flex flex-[1_0_0] flex-wrap gap-[4px] items-center min-w-px relative" data-node-id="I6645:134066;364:1335" data-name="Wrapper">
+                <div className="bg-[var(--base\/base-service\/positive\/base-positive-pale-normal,#d0fae5)] content-stretch flex gap-[var(--global-dimensions\/2-px-\|-0\,12-rem,2px)] items-center justify-center pl-[var(--global-dimensions\/4-px-\|-0\,25-rem,4px)] pr-[var(--global-dimensions\/6-px-\|-0\,375-rem,6px)] py-[var(--global-dimensions\/1-px-\|-0\,063-rem,1px)] relative rounded-[var(--component\/badge\/badge-3xs\/badge-3xs-corner-radius,4px)] shrink-0" data-node-id="I6645:134066;364:1336" data-name="badge-support-01">
+                  <div className="relative shrink-0 size-[12px]" data-node-id="I6645:134066;364:1336;461:3583" data-name="Status">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgStatus1} />
+                  </div>
+                  <div className="[word-break:break-word] flex flex-col font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal justify-center leading-[0] relative shrink-0 text-[color:var(--text\/text-service\/text-positive-normal,#007a55)] text-[length:var(--typography\/font-sizes\/body\/body-xs\/body-xs-font-size,12px)] text-center tracking-[var(--typography\/font-sizes\/body\/body-xs\/body-xs-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I6645:134066;364:1336;461:3586">
+                    <p className="leading-[var(--typography\/font-sizes\/body\/body-xs\/body-xs-font-line_height,18px)]">Комплект</p>
+                  </div>
+                </div>
+              </div>
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+            </div>
+            <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[80px]" data-node-id="6645:134069" data-name="table-cell-text">
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="I6645:134069;203:7142" data-name="Wrapper">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134069;203:7144">
+                  —
+                </p>
+              </div>
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+            </div>
+            <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[80px]" data-node-id="6645:134070" data-name="table-cell-text">
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="I6645:134070;203:7142" data-name="Wrapper">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134070;203:7144">
+                  —
+                </p>
+              </div>
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+            </div>
+            <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b border-solid content-stretch flex h-full items-start py-[14px] relative shrink-0 w-[80px]" data-node-id="6645:134068" data-name="table-cell-text">
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+              <div className="content-stretch flex flex-[1_0_0] flex-col items-start justify-center min-w-px relative" data-node-id="I6645:134068;203:7142" data-name="Wrapper">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] w-full" data-node-id="I6645:134068;203:7144">
+                  —
+                </p>
+              </div>
+              <SpacerDeprecated className="h-full max-w-[12px] min-w-[12px] relative shrink-0 w-[12px]" size="12px | 0.75rem" />
+            </div>
+          </div>
+        </div>
+        <div className="content-stretch flex items-center justify-between py-[var(--global-dimensions\/8-px-\|-0\,5-rem,8px)] relative shrink-0 w-full" data-node-id="6645:133286" data-name="pager">
+          <div className="content-stretch flex gap-[4px] items-start relative shrink-0" data-node-id="I6645:133286;2495:20692" data-name="pagination">
+            <div className="content-stretch flex gap-[var(--component\/button\/button-xs\/button-xs-gap-horizontal,4px)] h-[32px] items-center justify-center max-h-[32px] max-w-[32px] min-h-[32px] min-w-[32px] opacity-56 overflow-clip pb-[var(--component\/button\/button-xs\/button-xs-padding-bottom,12px)] pl-[var(--component\/button\/button-xs\/button-xs-padding-left-null,0px)] pr-[var(--component\/button\/button-xs\/button-xs-padding-right-null,0px)] pt-[var(--component\/button\/button-xs\/button-xs-padding-top,12px)] relative rounded-[var(--component\/button\/button-xs\/button-xs-corner-radius,8px)] shrink-0" data-node-id="I6645:133286;2495:20693" data-name="button-flat">
+              <div className="relative shrink-0 size-[18px]" data-node-id="I6645:133286;2495:20693;449:2596" data-name="chevron-left">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgChevronLeft} />
+              </div>
+            </div>
+            <div className="bg-[var(--base\/base-accent\/accent-primary\/base-accent-normal,#323336)] content-stretch flex h-[32px] items-center justify-center max-h-[32px] min-h-[32px] min-w-[32px] overflow-clip px-[var(--global-dimensions\/8-px-\|-0\,5-rem,8px)] relative rounded-[var(--round\/round-sm,8px)] shrink-0" data-node-id="I6645:133286;2495:20694" data-name="items / pagination-item">
+              <div className="[word-break:break-word] flex flex-col font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium justify-center leading-[0] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary-opposite\/text-primary-opposite-normal,white)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] text-center tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I6645:133286;2495:20694;2001:1599">
+                <p className="leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)]">1</p>
+              </div>
+            </div>
+            <div className="content-stretch flex h-[32px] items-center justify-center min-w-[32px] overflow-clip px-[var(--global-dimensions\/8-px-\|-0\,5-rem,8px)] relative rounded-[var(--round\/round-sm,8px)] shrink-0" data-node-id="I6645:133286;2495:20695" data-name="items / pagination-item">
+              <div className="[word-break:break-word] flex flex-[1_0_0] flex-col font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal justify-center leading-[0] min-w-px relative text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] text-center tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)]" data-node-id="I6645:133286;2495:20695;2001:1592">
+                <p className="leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)]">2</p>
+              </div>
+            </div>
+            <div className="content-stretch flex h-[32px] items-center justify-center min-w-[32px] overflow-clip px-[var(--global-dimensions\/8-px-\|-0\,5-rem,8px)] relative rounded-[var(--round\/round-sm,8px)] shrink-0" data-node-id="I6645:133286;2495:20696" data-name="items / pagination-item">
+              <div className="[word-break:break-word] flex flex-[1_0_0] flex-col font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal justify-center leading-[0] min-w-px relative text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] text-center tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)]" data-node-id="I6645:133286;2495:20696;2001:1592">
+                <p className="leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)]">3</p>
+              </div>
+            </div>
+            <div className="content-stretch flex h-[32px] items-center justify-center min-w-[32px] overflow-clip px-[var(--global-dimensions\/8-px-\|-0\,5-rem,8px)] relative rounded-[var(--round\/round-sm,8px)] shrink-0" data-node-id="I6645:133286;2495:20697" data-name="items / pagination-item">
+              <div className="[word-break:break-word] flex flex-[1_0_0] flex-col font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal justify-center leading-[0] min-w-px relative text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] text-center tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)]" data-node-id="I6645:133286;2495:20697;2001:1592">
+                <p className="leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)]">4</p>
+              </div>
+            </div>
+            <div className="content-stretch flex h-[32px] items-center justify-center min-w-[32px] overflow-clip px-[var(--global-dimensions\/8-px-\|-0\,5-rem,8px)] relative rounded-[var(--round\/round-sm,8px)] shrink-0" data-node-id="I6645:133286;2495:20698" data-name="items / pagination-item">
+              <div className="[word-break:break-word] flex flex-[1_0_0] flex-col font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal justify-center leading-[0] min-w-px relative text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] text-center tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)]" data-node-id="I6645:133286;2495:20698;2001:1592">
+                <p className="leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)]">...</p>
+              </div>
+            </div>
+            <div className="content-stretch flex h-[32px] items-center justify-center min-w-[32px] overflow-clip px-[var(--global-dimensions\/8-px-\|-0\,5-rem,8px)] relative rounded-[var(--round\/round-sm,8px)] shrink-0" data-node-id="I6645:133286;2495:20699" data-name="items / pagination-item">
+              <div className="[word-break:break-word] flex flex-[1_0_0] flex-col font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal justify-center leading-[0] min-w-px relative text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] text-center tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)]" data-node-id="I6645:133286;2495:20699;2001:1592">
+                <p className="leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)]">56</p>
+              </div>
+            </div>
+            <div className="content-stretch flex gap-[var(--component\/button\/button-xs\/button-xs-gap-horizontal,4px)] h-[32px] items-center justify-center max-h-[32px] max-w-[32px] min-h-[32px] min-w-[32px] overflow-clip pb-[var(--component\/button\/button-xs\/button-xs-padding-bottom,12px)] pt-[var(--component\/button\/button-xs\/button-xs-padding-top,12px)] px-[7px] relative rounded-[var(--component\/button\/button-xs\/button-xs-corner-radius,8px)] shrink-0" data-node-id="I6645:133286;2495:20700" data-name="button-flat">
+              <div className="relative shrink-0 size-[18px]" data-node-id="I6645:133286;2495:20700;449:2592" data-name="chevron-right">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgChevronRight} />
+              </div>
+            </div>
+          </div>
+          <div className="[word-break:break-word] content-stretch flex gap-[4px] items-center leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] overflow-clip relative rounded-[4px] shrink-0 text-[14px] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I6645:133286;2001:908" data-name="row">
+            <p className="font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal overflow-hidden relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-ellipsis" data-node-id="I6645:133286;2001:909">
+              Строк на страницу
+            </p>
+            <p className="font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium overflow-hidden relative shrink-0 text-[color:var(--text\/text-service\/text-link-normal,#526ed3)] text-ellipsis" data-node-id="I6645:133286;2001:910">
+              1 – 16
+            </p>
+            <p className="font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal overflow-hidden relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-ellipsis" data-node-id="I6645:133286;2001:911">
+              из
+            </p>
+            <p className="font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium overflow-hidden relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-ellipsis" data-node-id="I6645:133286;2001:912">
+              256
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: body/body-md/body-md-500: Font(family: "typography/main settings/font family/content", style: typography/main settings/font weight/500, size: typography/font sizes/body/body-md/body-md-font-size, weight: 500, lineHeight: typography/font sizes/body/body-md/body-md-font-line_height, letterSpacing: typography/font sizes/body/body-md/body-md-font-letter_spacing), body/body-md/body-md-400: Font(family: "typography/main settings/font family/content", style: typography/main settings/font weight/400, size: typography/font sizes/body/body-md/body-md-font-size, weight: 400, lineHeight: typography/font sizes/body/body-md/body-md-font-line_height, letterSpacing: typography/font sizes/body/body-md/body-md-font-letter_spacing), body/body-xs/body-xs-400: Font(family: "typography/main settings/font family/content", style: typography/main settings/font weight/400, size: typography/font sizes/body/body-xs/body-xs-font-size, weight: 400, lineHeight: typography/font sizes/body/body-xs/body-xs-font-line_height, letterSpacing: typography/font sizes/body/body-xs/body-xs-font-letter_spacing), Avatar/Female/Mavis Barry: .
+Component descriptions: The following components have usage descriptions or documentation links defined in Figma. These descriptions provide important context about the intended usage, best practices, and any constraints for each component. Follow these guidelines when implementing or using these components.
+
+## table-header
+**Node ID:** 3682:61707
+
+Компонент ячейки таблицы.
+
+## chevron-selector-vertical
+**Node ID:** 3682:61688
+
+chevron, selector, vertical, expand, open
+
+## table-cell-text
+**Node ID:** 4726:73633
+
+Компонент ячейки таблицы.
+
+## table-cell-avatar
+**Node ID:** 4555:19778
+
+Компонент ячейки таблицы.
+
+## table-cell-status
+**Node ID:** 3448:12404
+
+Компонент ячейки таблицы.
+
+## check-circle
+**Node ID:** 3448:12399
+
+check, tick, confirm, checkbox, circle
+
+## table-cell-chips
+**Node ID:** 3430:63343
+
+Компонент ячейки таблицы.
+
+## button-flat
+**Node ID:** 4378:89012
+
+**Tertiary кнопка** — это кнопка наименьшего приоритета, предназначенная для вспомогательных или контекстных действий. Она выглядит максимально ненавязчиво. Используется для второстепенных опций или действий, которые не требуют визуального акцента и не должны конкурировать с primary и secondary кнопками.
+
+## chevron-left
+**Node ID:** 3343:31573
+
+chevron, left
+
+## items / pagination-item
+**Node ID:** 5991:56628
+
+**Documentation:**
+- [https://go.tcsbank.ru/tui-pager](https://go.tcsbank.ru/tui-pager)
+
+## chevron-right
+**Node ID:** 2243:48178
+
+chevron, right
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

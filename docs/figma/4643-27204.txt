@@ -1,0 +1,737 @@
+const imgClose = "https://www.figma.com/api/mcp/asset/d1f003e7-5ff4-4be7-93c9-67989e5a3086.svg";
+const imgClose1 = "https://www.figma.com/api/mcp/asset/a22be22a-a334-4c5e-a9fd-5cbf53abe526.svg";
+const imgClose2 = "https://www.figma.com/api/mcp/asset/ca5d77e2-6725-4f1c-9f30-25f1c499c720.svg";
+const imgSizeS40ContentPhotoBorderOff = "https://www.figma.com/api/mcp/asset/8b54db1f-c61f-446a-a5ea-54886ff1c0cd.png";
+const imgImgMale = "https://www.figma.com/api/mcp/asset/ac6b8215-2818-49b8-a192-6f25a5643ed9.png";
+const imgImgMale1 = "https://www.figma.com/api/mcp/asset/2a46c24f-78cd-4955-8b45-61a40e35b62f.png";
+const imgCuLogoRusShort = "https://www.figma.com/api/mcp/asset/5623ddc8-7d19-44a9-99c1-92c8f08711f9.svg";
+const imgChevronRight = "https://www.figma.com/api/mcp/asset/edccb995-cd07-4022-95ce-b501f3f53a87.svg";
+const imgUsers01Lined = "https://www.figma.com/api/mcp/asset/594ee4bc-11fa-49bd-a254-df49e30fa0ac.svg";
+const imgCertificate01 = "https://www.figma.com/api/mcp/asset/def8ec13-bd9d-453a-a9ba-745e47674595.svg";
+const imgCertificate01Lined = "https://www.figma.com/api/mcp/asset/f754800b-3034-45e8-b6e1-e10beee68aad.svg";
+const imgGraduationHat02 = "https://www.figma.com/api/mcp/asset/a9b8385f-df80-4fe7-a349-ec3e351186b6.svg";
+const imgFile02 = "https://www.figma.com/api/mcp/asset/e4e1ae80-388f-4f4a-8a81-3aa3fd82dd42.svg";
+const imgCalendarPlus01 = "https://www.figma.com/api/mcp/asset/56910e77-6174-44b7-b790-0d4bd6c7e3cd.svg";
+const imgBriefcase01 = "https://www.figma.com/api/mcp/asset/50965a7e-9bf7-41c3-aa35-24bd4301e43a.svg";
+const imgWallet03Lined = "https://www.figma.com/api/mcp/asset/12e4d535-36df-4a29-84a1-dd6eb1c81327.svg";
+const imgRouteLined = "https://www.figma.com/api/mcp/asset/9bb00a8d-a461-4e4f-930a-b3f78af80dd0.svg";
+const imgChevronRight1 = "https://www.figma.com/api/mcp/asset/0b21ea7c-0437-4adc-9b8c-3998e847d00f.svg";
+const imgSettings01 = "https://www.figma.com/api/mcp/asset/d7eb9792-4e5f-4234-ad9b-9a85e2983c95.svg";
+const imgBell01 = "https://www.figma.com/api/mcp/asset/ccf1c9e3-78e1-4d51-901f-b02de97ae34b.svg";
+const imgCheckSmallLined = "https://www.figma.com/api/mcp/asset/444f06b4-2b22-4674-826a-256a6f715692.svg";
+const imgCheckCircleFillFilled = "https://www.figma.com/api/mcp/asset/fcc66ec7-2743-4d93-8e33-0bc366bcbf31.svg";
+const imgArea = "https://www.figma.com/api/mcp/asset/12b0dbb4-0330-4b3e-86f3-ff945cc7cb58.svg";
+const imgPlusLined = "https://www.figma.com/api/mcp/asset/a4d3e50b-6605-497c-8dd1-6cd76ad6aed4.svg";
+const imgMinusLined = "https://www.figma.com/api/mcp/asset/8a377986-6319-409a-8204-963125c41b90.svg";
+const imgClockFillFilled = "https://www.figma.com/api/mcp/asset/61ef10cf-9491-4b2f-8b08-437bac056c51.svg";
+
+type SpacerDeprecatedProps = {
+  className?: string;
+  orientation?: "Horizontal";
+  size?: "16px | 1rem" | "40px | 2.5rem";
+  visible?: "Off";
+};
+
+function SpacerDeprecated({ className, orientation = "Horizontal", size = "16px | 1rem", visible = "Off" }: SpacerDeprecatedProps) {
+  const is40Px25RemAndHorizontalAndOff = size === "40px | 2.5rem" && orientation === "Horizontal" && visible === "Off";
+  return <div className={className || `overflow-clip relative w-[384px] ${is40Px25RemAndHorizontalAndOff ? "h-[40px] max-h-[40px] min-h-[40px]" : "h-[16px] max-h-[16px] min-h-[16px]"}`} id={is40Px25RemAndHorizontalAndOff ? "node-3430_63243" : "node-3430_63237"} />;
+}
+
+type ButtonSelectProps = {
+  className?: string;
+  selected?: "false";
+  size?: "xs - 24px";
+  state?: "normal";
+};
+
+function ButtonSelect({ className, selected = "false", size = "xs - 24px", state = "normal" }: ButtonSelectProps) {
+  return (
+    <div className={className || "content-stretch flex items-start overflow-clip relative size-[24px]"} data-node-id="4963:45672">
+      <div className="relative shrink-0 size-[24px]" data-node-id="4963:45680" data-name="Close">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgClose} />
+      </div>
+    </div>
+  );
+}
+
+type ButtonDataTimeProps = {
+  className?: string;
+  size?: "xs - 24px";
+  state?: "normal";
+  type?: "data";
+};
+
+function ButtonDataTime({ className, size = "xs - 24px", state = "normal", type = "data" }: ButtonDataTimeProps) {
+  return (
+    <div className={className || "content-stretch flex items-start overflow-clip relative size-[24px]"} data-node-id="4963:49205">
+      <div className="relative shrink-0 size-[24px]" data-node-id="4963:49213" data-name="Close">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgClose1} />
+      </div>
+    </div>
+  );
+}
+
+type ButtonClearProps = {
+  className?: string;
+  emphasis?: "normal";
+  size?: "xs - 24px";
+  state?: "normal";
+};
+
+function ButtonClear({ className, emphasis = "normal", size = "xs - 24px", state = "normal" }: ButtonClearProps) {
+  return (
+    <div className={className || "content-stretch flex items-start overflow-clip relative size-[24px]"} data-node-id="4963:40957">
+      <div className="relative shrink-0 size-[24px]" data-node-id="4963:40973" data-name="Close">
+        <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgClose2} />
+      </div>
+    </div>
+  );
+}
+
+type AvatarProps = {
+  className?: string;
+  border?: "Off";
+  content?: "Photo";
+  size?: "S - 40";
+};
+
+function Avatar({ className, border = "Off", content = "Photo", size = "S - 40" }: AvatarProps) {
+  return (
+    <div className={className || "overflow-clip relative rounded-[200px] size-[40px]"} data-node-id="4:2781">
+      <img alt="" className="absolute inset-0 max-w-none object-cover pointer-events-none size-full" src={imgSizeS40ContentPhotoBorderOff} />
+    </div>
+  );
+}
+
+export default function CardPersonalEditFilled() {
+  return (
+    <div className="bg-[var(--tui-background-base,white)] content-stretch flex items-start justify-end relative size-full" data-node-id="4643:27204" data-name="card-personal / edit / filled">
+      <div className="bg-[var(--base\/page-backgrounds-and-elevations\/normal\/base-elevation-01,white)] content-stretch flex flex-col items-start overflow-clip relative self-stretch shrink-0" data-node-id="4643:27205" data-name="sidebar">
+        <div className="bg-[var(--base\/page-backgrounds-and-elevations\/normal\/base-elevation-01,white)] border-[var(--border\/normal\/border-normal,#cdcfd2)] border-r border-solid content-stretch flex flex-[1_0_0] flex-col gap-[var(--global-dimensions\/8-px-\|-0\,5-rem,8px)] items-center min-h-px min-w-[72px] overflow-clip pb-[var(--global-dimensions\/12-px-\|-0\,75-rem,12px)] pt-[var(--global-dimensions\/16-px-\|-1-rem,16px)] relative" data-node-id="4643:27211" data-name="sidebar-base-adminka">
+          <div className="content-stretch flex flex-col items-center pb-[8px] px-[12px] relative shrink-0 w-full" data-node-id="I4643:27211;2467:34817" data-name="logo">
+            <div className="h-[32px] relative shrink-0 w-[49px]" data-node-id="I4643:27211;2467:34818" data-name="cu_logo-rus_short">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCuLogoRusShort} />
+            </div>
+          </div>
+          <button className="content-stretch cursor-pointer flex gap-[var(--component\/button\/button-sm\/button-sm-gap-horizontal,4px)] h-[40px] items-center justify-center max-h-[40px] max-w-[40px] min-h-[40px] min-w-[40px] overflow-clip pb-[var(--component\/button\/button-sm\/button-sm-padding-bottom,12px)] pl-[var(--component\/button\/button-sm\/button-sm-padding-left-null,0px)] pr-[var(--component\/button\/button-sm\/button-sm-padding-right-null,0px)] pt-[var(--component\/button\/button-sm\/button-sm-padding-top,12px)] relative rounded-[var(--component\/button\/button-sm\/button-sm-corner-radius,12px)] shrink-0" data-node-id="I4643:27211;2464:15910" data-name="collapse button">
+            <div className="relative shrink-0 size-[24px]" data-node-id="I4643:27211;2464:15910;449:2556" data-name="chevron-right">
+              <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgChevronRight} />
+            </div>
+          </button>
+          <div className="bg-[var(--base\/base-accent\/accent-pale\/base-accent-pale,#f4f4f5)] content-stretch flex gap-[16px] items-center overflow-clip p-[8px] relative rounded-[var(--round\/round-md,12px)] shrink-0" data-node-id="I4643:27211;811:15505" data-name="navtab-main">
+            <div className="content-stretch flex items-center relative shrink-0" data-node-id="I4643:27211;811:15505;17:5076" data-name="Content">
+              <div className="relative shrink-0 size-[24px]" data-node-id="I4643:27211;811:15505;17:5077" data-name="users-01-lined">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgUsers01Lined} />
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[16px] items-center overflow-clip p-[8px] relative rounded-[var(--round\/round-md,12px)] shrink-0" data-node-id="I4643:27211;966:25746" data-name="navtab-main-03">
+            <div className="content-stretch flex items-center relative shrink-0" data-node-id="I4643:27211;966:25746;17:5066" data-name="Content">
+              <div className="relative shrink-0 size-[24px]" data-node-id="I4643:27211;966:25746;17:5067" data-name="certificate-01">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCertificate01} />
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[16px] items-center overflow-clip p-[8px] relative rounded-[var(--round\/round-md,12px)] shrink-0" data-node-id="I4643:27211;2412:2132" data-name="navtab-main-03">
+            <div className="content-stretch flex items-center relative shrink-0" data-node-id="I4643:27211;2412:2132;17:5066" data-name="Content">
+              <div className="relative shrink-0 size-[24px]" data-node-id="I4643:27211;2412:2132;17:5067" data-name="certificate-01-lined">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCertificate01Lined} />
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[16px] items-center overflow-clip p-[8px] relative rounded-[var(--round\/round-md,12px)] shrink-0" data-node-id="I4643:27211;2734:2717" data-name="navtab-main">
+            <div className="content-stretch flex items-center relative shrink-0" data-node-id="I4643:27211;2734:2717;17:5066" data-name="Content">
+              <div className="relative shrink-0 size-[24px]" data-node-id="I4643:27211;2734:2717;17:5067" data-name="graduation-hat-02">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgGraduationHat02} />
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[16px] items-center overflow-clip p-[8px] relative rounded-[var(--round\/round-md,12px)] shrink-0" data-node-id="I4643:27211;1162:854" data-name="navtab-main">
+            <div className="content-stretch flex items-center relative shrink-0" data-node-id="I4643:27211;1162:854;17:5066" data-name="Content">
+              <div className="relative shrink-0 size-[24px]" data-node-id="I4643:27211;1162:854;17:5067" data-name="file-02">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgFile02} />
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[16px] items-center overflow-clip p-[8px] relative rounded-[var(--round\/round-md,12px)] shrink-0" data-node-id="I4643:27211;1424:1085" data-name="navtab-main-03">
+            <div className="content-stretch flex items-center relative shrink-0" data-node-id="I4643:27211;1424:1085;17:5066" data-name="Content">
+              <div className="relative shrink-0 size-[24px]" data-node-id="I4643:27211;1424:1085;17:5067" data-name="calendar-plus-01">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCalendarPlus01} />
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[16px] items-center overflow-clip p-[8px] relative rounded-[var(--round\/round-md,12px)] shrink-0" data-node-id="I4643:27211;2565:4126" data-name="navtab-main-03">
+            <div className="content-stretch flex items-center relative shrink-0" data-node-id="I4643:27211;2565:4126;17:5066" data-name="Content">
+              <div className="relative shrink-0 size-[24px]" data-node-id="I4643:27211;2565:4126;17:5067" data-name="briefcase-01">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgBriefcase01} />
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[16px] items-center overflow-clip p-[8px] relative rounded-[var(--round\/round-md,12px)] shrink-0" data-node-id="I4643:27211;3209:5894" data-name="navtab-main-03">
+            <div className="content-stretch flex items-center relative shrink-0" data-node-id="I4643:27211;3209:5894;17:5066" data-name="Content">
+              <div className="relative shrink-0 size-[24px]" data-node-id="I4643:27211;3209:5894;17:5067" data-name="wallet-03-lined">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgWallet03Lined} />
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[16px] items-center overflow-clip p-[8px] relative rounded-[var(--round\/round-md,12px)] shrink-0" data-node-id="I4643:27211;3223:4553" data-name="navtab-main-03">
+            <div className="content-stretch flex items-center relative shrink-0" data-node-id="I4643:27211;3223:4553;17:5066" data-name="Content">
+              <div className="relative shrink-0 size-[24px]" data-node-id="I4643:27211;3223:4553;17:5067" data-name="route-lined">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgRouteLined} />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px overflow-clip pb-[48px] px-[48px] relative" data-node-id="4643:27212" data-name="field">
+        <div className="content-start flex flex-wrap gap-[0px_994px] items-start overflow-clip py-[12px] relative shrink-0 w-full" data-node-id="4643:27213" data-name="header-base">
+          <div className="content-stretch flex gap-[8px] items-center overflow-clip relative shrink-0" data-node-id="I4643:27213;161:53389" data-name="[deprecated] breadcrumbs">
+            <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="I4643:27213;161:53389;1750:945" data-name="Home">
+              <div className="content-stretch flex items-center justify-center py-[6px] relative shrink-0" data-node-id="I4643:27213;161:53389;1750:946" data-name="Level 1">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-secondary\/text-secondary\/text-secondary-normal,#5a5e62)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27213;161:53389;1750:946;1750:1063">
+                  Кадровое планирование
+                </p>
+              </div>
+              <div className="relative shrink-0 size-[16px]" data-node-id="I4643:27213;161:53389;1750:947" data-name="chevron-right">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgChevronRight1} />
+              </div>
+            </div>
+            <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="I4643:27213;161:53389;1750:948" data-name="Level 2">
+              <div className="content-stretch flex items-center justify-center py-[6px] relative shrink-0" data-node-id="I4643:27213;161:53389;1750:949" data-name="Level 2">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-secondary\/text-secondary\/text-secondary-normal,#5a5e62)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27213;161:53389;1750:949;1750:1063">
+                  Финансовая математика
+                </p>
+              </div>
+              <div className="relative shrink-0 size-[16px]" data-node-id="I4643:27213;161:53389;1750:950" data-name="chevron-right">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgChevronRight1} />
+              </div>
+            </div>
+            <div className="content-stretch flex gap-[8px] items-center relative shrink-0" data-node-id="I4643:27213;161:53389;1750:951" data-name="Level 3">
+              <div className="content-stretch flex items-center justify-center py-[6px] relative shrink-0" data-node-id="I4643:27213;161:53389;1750:952" data-name="Level 3">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-secondary\/text-secondary\/text-secondary-normal,#5a5e62)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27213;161:53389;1750:952;1750:1063">
+                  Алферов Илья Сергеевич
+                </p>
+              </div>
+              <div className="relative shrink-0 size-[16px]" data-node-id="I4643:27213;161:53389;1750:953" data-name="chevron-right">
+                <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgChevronRight1} />
+              </div>
+            </div>
+            <div className="content-stretch flex items-center relative shrink-0" data-node-id="I4643:27213;161:53389;1750:954" data-name="Level 4">
+              <div className="content-stretch flex items-center justify-center py-[6px] relative shrink-0" data-node-id="I4643:27213;161:53389;1750:955" data-name="Level 4">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--base\/base-accent\/accent-primary\/base-accent-normal,#393b3e)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27213;161:53389;1750:955;1750:1083">
+                  Редактировать
+                </p>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex gap-[12px] items-start relative shrink-0" data-node-id="I4643:27213;161:53390" data-name="right">
+            <div className="content-stretch flex gap-[4px] items-start relative shrink-0" data-node-id="I4643:27213;161:53391" data-name="buttons">
+              <div className="content-stretch flex gap-[var(--components\/buttons\/button-sm\/button-sm-gap-horizontal,4px)] h-[40px] items-center justify-center max-h-[40px] max-w-[40px] min-h-[40px] min-w-[40px] overflow-clip pb-[var(--components\/buttons\/button-sm\/button-sm-padding-bottom,12px)] pl-[var(--components\/buttons\/button-sm\/button-sm-padding-left-null,0px)] pr-[var(--components\/buttons\/button-sm\/button-sm-padding-right-null,0px)] pt-[var(--components\/buttons\/button-sm\/button-sm-padding-top,12px)] relative rounded-[var(--rounds\/round-sm,8px)] shrink-0" data-node-id="I4643:27213;161:53393" data-name="button-flat">
+                <div className="relative shrink-0 size-[24px]" data-node-id="I4643:27213;161:53393;449:2556" data-name="settings-01">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgSettings01} />
+                </div>
+              </div>
+              <div className="content-stretch flex gap-[var(--components\/buttons\/button-sm\/button-sm-gap-horizontal,4px)] h-[40px] items-center justify-center max-h-[40px] max-w-[40px] min-h-[40px] min-w-[40px] overflow-clip pb-[var(--components\/buttons\/button-sm\/button-sm-padding-bottom,12px)] pl-[var(--components\/buttons\/button-sm\/button-sm-padding-left-null,0px)] pr-[var(--components\/buttons\/button-sm\/button-sm-padding-right-null,0px)] pt-[var(--components\/buttons\/button-sm\/button-sm-padding-top,12px)] relative rounded-[var(--rounds\/round-sm,8px)] shrink-0" data-node-id="I4643:27213;161:53394" data-name="button-flat">
+                <div className="relative shrink-0 size-[24px]" data-node-id="I4643:27213;161:53394;449:2556" data-name="bell-01">
+                  <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgBell01} />
+                </div>
+              </div>
+            </div>
+            <Avatar className="overflow-clip relative rounded-[200px] shrink-0 size-[40px]" />
+          </div>
+        </div>
+        <SpacerDeprecated className="h-[16px] max-h-[16px] min-h-[16px] relative shrink-0 w-full" />
+        <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="4643:27215" data-name="header">
+          <div className="content-stretch flex items-center relative shrink-0" data-node-id="4643:27216" data-name="info">
+            <div className="content-stretch flex flex-col items-start justify-center relative shrink-0" data-node-id="4643:27217" data-name="about">
+              <div className="content-stretch flex flex-col items-start justify-center relative shrink-0" data-node-id="4643:27218" data-name="name">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-display,'Inter:Semi_Bold')] font-[var(--typography\/main-settings\/font-weight\/font-weight-600,normal)] font-semibold leading-[var(--typography\/font-size\/display\/display-md\/display-md-font-line_height,40px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/display\/display-md\/display-md-font-size,32px)] tracking-[var(--typography\/font-size\/display\/display-md\/display-md-font-letter_spacing,-0.5px)] whitespace-nowrap" data-node-id="4643:27219">
+                  Редактировать данные
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <SpacerDeprecated className="h-[40px] max-h-[40px] min-h-[40px] relative shrink-0 w-full" size="40px | 2.5rem" />
+        <div className="content-stretch flex flex-col gap-[40px] items-start relative shrink-0" data-node-id="4643:27221" data-name="list">
+          <div className="content-stretch flex flex-col gap-[16px] items-center relative shrink-0 w-[836px]" data-node-id="4643:27222" data-name="block">
+            <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="4643:27223" data-name="heading">
+              <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-display,'Inter:Semi_Bold')] font-[var(--typography\/main-settings\/font-weight\/font-weight-600,normal)] font-semibold leading-[var(--typography\/font-size\/display\/display-xs\/display-xs-font-line_height,28px)] overflow-hidden relative shrink-0 text-[20px] text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-ellipsis tracking-[var(--typography\/font-size\/display\/display-xs\/display-xs-font-letter_spacing,0px)] w-full whitespace-nowrap" data-node-id="4643:27224">
+                Общая информация
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="4643:27225" data-name="list">
+              <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full" data-node-id="4643:27226" data-name="input-text-select">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-secondary\/text-secondary\/text-secondary-normal,#5a5e62)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27226;752:19229">
+                  Статус найма
+                </p>
+                <div className="border border-[var(--border\/normal\/border-normal,#cdcfd2)] border-solid content-stretch flex gap-[8px] h-[40px] items-center overflow-clip pl-[12px] pr-[8px] relative rounded-[var(--round\/round-sm,8px)] shrink-0 w-full" data-node-id="I4643:27226;752:19230" data-name="Field wrapper">
+                  <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I4643:27226;752:19232" data-name="Text Wrapper">
+                    <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="I4643:27226;752:19233" data-name="Field value">
+                      <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal leading-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-line_height,24px)] overflow-hidden relative shrink-0 text-[16px] text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-ellipsis tracking-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27226;752:19234">
+                        ТД
+                      </p>
+                    </div>
+                  </div>
+                  <ButtonSelect className="content-stretch flex items-start overflow-clip relative shrink-0 size-[24px]" />
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full" data-node-id="4643:27227" data-name="input-text-select">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/font-weight-500,normal)] font-medium leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-secondary\/text-secondary\/text-secondary-normal,#5a5e62)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="4643:27228">
+                  Сотрудник
+                </p>
+                <div className="border border-[var(--border\/normal\/border-normal,#cdcfd2)] border-solid content-stretch flex gap-[8px] h-[40px] items-center overflow-clip pl-[12px] pr-[8px] relative rounded-[var(--round\/round-md,12px)] shrink-0 w-full" data-node-id="4643:27229" data-name="Field wrapper">
+                  <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="4643:27231" data-name="Text Wrapper">
+                    <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="4643:27232" data-name="Field value">
+                      <div className="content-stretch flex flex-[1_0_0] gap-[8px] items-center min-w-px overflow-clip relative rounded-[4px]" data-node-id="4643:27233" data-name="profile">
+                        <div className="content-stretch flex items-start relative shrink-0" data-node-id="4643:27235" data-name="left part / avatar">
+                          <div className="overflow-clip relative rounded-[var(--rounds\/round-max,100000px)] shrink-0 size-[24px]" data-node-id="I4643:27235;304:9943" data-name="avatar">
+                            <div className="absolute inset-0 pointer-events-none" data-node-id="I4643:27235;304:9943;32:584" data-name="img-male">
+                              <div aria-hidden className="absolute inset-0">
+                                <div className="absolute bg-[#d7dfe9] inset-0" />
+                                <img alt="" className="absolute max-w-none object-cover size-full" src={imgImgMale} />
+                              </div>
+                              <img alt="" className="absolute inset-0 max-w-none object-cover size-full" src={imgImgMale1} />
+                            </div>
+                          </div>
+                        </div>
+                        <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="4643:27236" data-name="Label">
+                          <div className="[word-break:break-word] flex flex-col font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal justify-center leading-[0] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-lg\/body-lg-font-size,16px)] tracking-[var(--typography\/font-size\/body\/body-lg\/body-lg-font-letter_spacing,0px)] w-full" data-node-id="4643:27238">
+                            <p className="leading-[var(--typography\/font-size\/body\/body-lg\/body-lg-font-line_height,24px)]">Николаев Николай Николаевич</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <ButtonSelect className="content-stretch flex items-start overflow-clip relative shrink-0 size-[24px]" />
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[4px] h-[64px] items-start relative shrink-0 w-full" data-node-id="4643:27245" data-name="input-text">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-secondary\/text-secondary\/text-secondary-normal,#5a5e62)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27245;750:13029">
+                  Jira-таска по сотруднику
+                </p>
+                <div className="border border-[var(--border\/normal\/border-normal,#cdcfd2)] border-solid content-stretch flex flex-[1_0_0] gap-[8px] items-center min-h-px overflow-clip pl-[12px] pr-[8px] relative rounded-[var(--round\/round-sm,8px)] w-full" data-node-id="I4643:27245;750:13030" data-name="Field wrapper">
+                  <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I4643:27245;750:13032" data-name="Text Wrapper">
+                    <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="I4643:27245;750:13033" data-name="Field value">
+                      <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal leading-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-line_height,24px)] overflow-hidden relative shrink-0 text-[16px] text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-ellipsis tracking-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27245;750:13034">{`https://jira.com/cu/task/alferov`}</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[4px] h-[64px] items-start relative shrink-0 w-full" data-node-id="4643:27246" data-name="input-text">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-secondary\/text-secondary\/text-secondary-normal,#5a5e62)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27246;750:13029">
+                  Заявка на пропуск
+                </p>
+                <div className="border border-[var(--border\/normal\/border-normal,#cdcfd2)] border-solid content-stretch flex flex-[1_0_0] gap-[8px] items-center min-h-px overflow-clip pl-[12px] pr-[8px] relative rounded-[var(--round\/round-sm,8px)] w-full" data-node-id="I4643:27246;750:13030" data-name="Field wrapper">
+                  <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I4643:27246;750:13032" data-name="Text Wrapper">
+                    <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="I4643:27246;750:13033" data-name="Field value">
+                      <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal leading-[0] overflow-hidden relative shrink-0 text-[16px] text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-ellipsis tracking-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27246;750:13034">
+                        <span className="leading-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-line_height,24px)]">{`https://tbank.ru/cu`}</span>
+                        <span className="leading-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-line_height,24px)]">/propusk</span>
+                        <span className="leading-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-line_height,24px)]">/alferov</span>
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full" data-node-id="4643:27247" data-name="input-text-select">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/font-weight-500,normal)] font-medium leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-secondary\/text-secondary\/text-secondary-normal,#5a5e62)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="4643:27248">
+                  Ответственный координатор
+                </p>
+                <div className="border border-[var(--border\/normal\/border-normal,#cdcfd2)] border-solid content-stretch flex gap-[8px] h-[40px] items-center overflow-clip pl-[12px] pr-[8px] relative rounded-[var(--round\/round-md,12px)] shrink-0 w-full" data-node-id="4643:27249" data-name="Field wrapper">
+                  <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="4643:27251" data-name="Text Wrapper">
+                    <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="4643:27252" data-name="Field value">
+                      <div className="content-stretch flex flex-[1_0_0] gap-[8px] items-center min-w-px overflow-clip relative rounded-[4px]" data-node-id="4643:27253" data-name="profile">
+                        <div className="content-stretch flex items-start relative shrink-0" data-node-id="4643:27255" data-name="left part / avatar">
+                          <div className="overflow-clip relative rounded-[var(--rounds\/round-max,100000px)] shrink-0 size-[24px]" data-node-id="I4643:27255;304:9943" data-name="avatar">
+                            <div className="absolute inset-0 pointer-events-none" data-node-id="I4643:27255;304:9943;32:584" data-name="img-male">
+                              <div aria-hidden className="absolute inset-0">
+                                <div className="absolute bg-[#d7dfe9] inset-0" />
+                                <img alt="" className="absolute max-w-none object-cover size-full" src={imgImgMale} />
+                              </div>
+                              <img alt="" className="absolute inset-0 max-w-none object-cover size-full" src={imgImgMale1} />
+                            </div>
+                          </div>
+                        </div>
+                        <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="4643:27256" data-name="Label">
+                          <div className="[word-break:break-word] flex flex-col font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal justify-center leading-[0] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-size\/body\/body-lg\/body-lg-font-size,16px)] tracking-[var(--typography\/font-size\/body\/body-lg\/body-lg-font-letter_spacing,0px)] w-full" data-node-id="4643:27258">
+                            <p className="leading-[var(--typography\/font-size\/body\/body-lg\/body-lg-font-line_height,24px)]">Николаев Николай Николаевич</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <ButtonSelect className="content-stretch flex items-start overflow-clip relative shrink-0 size-[24px]" />
+                </div>
+              </div>
+              <div className="content-stretch flex gap-[10px] items-start relative shrink-0 w-full" data-node-id="4643:27265" data-name="row">
+                <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-w-px relative" data-node-id="4643:27266" data-name="block">
+                  <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/font-weight-500,normal)] font-medium leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-secondary\/text-secondary\/text-secondary-normal,#5a5e62)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="4643:27267">
+                    Онбординг онлайн
+                  </p>
+                  <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b-[length:var(--border\/border-sm,1px)] border-l-[length:var(--border\/border-sm,1px)] border-r border-solid border-t-[length:var(--border\/border-sm,1px)] content-stretch flex flex-col gap-[var(--global-dimensions\/12-px-\|-0\,75-rem,12px)] items-start px-[var(--global-dimensions\/16-px-\|-1-rem,16px)] py-[16px] relative rounded-[8px] shrink-0 w-full" data-node-id="4643:27268" data-name="сheckbox-block">
+                    <div className="content-stretch flex gap-[12px] items-start relative shrink-0 w-full" data-node-id="I4643:27268;588:57" data-name="checkbox">
+                      <div className="h-[24px] relative shrink-0 w-[20px]" data-node-id="I4643:27268;588:57;173:7548" data-name="Wrapper">
+                        <div className="absolute bg-[var(--base\/base\/accent\/accent-primary\/base-accent-normal,#393b3e)] content-stretch flex items-center justify-center left-0 overflow-clip rounded-[var(--round\/round-xs,4px)] size-[20px] top-[2px]" data-node-id="I4643:27268;588:57;81:126" data-name="Checkbox">
+                          <div className="relative shrink-0 size-[20px]" data-node-id="I4643:27268;588:57;81:127" data-name="check-small-lined">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCheckSmallLined} />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I4643:27268;588:57;85:220" data-name="Text">
+                        <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-node-id="I4643:27268;588:57;84:175" data-name="Label">
+                          <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-lg\/body-lg-font-line_height,24px)] overflow-hidden relative shrink-0 text-[16px] text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-ellipsis tracking-[var(--typography\/font-size\/body\/body-lg\/body-lg-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27268;588:57;84:176">
+                            Приглашение отправлено
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="content-stretch flex flex-[1_0_0] flex-col gap-[4px] items-start min-w-px relative self-stretch" data-node-id="4643:27269" data-name="block">
+                  <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/font-weight-500,normal)] font-medium leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-secondary\/text-secondary\/text-secondary-normal,#5a5e62)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="4643:27270">
+                    Онбординг офлайн
+                  </p>
+                  <div className="border-[var(--border\/border-normal,#cdcfd2)] border-b-[length:var(--border\/border-sm,1px)] border-l-[length:var(--border\/border-sm,1px)] border-r border-solid border-t-[length:var(--border\/border-sm,1px)] content-stretch flex flex-col gap-[var(--global-dimensions\/12-px-\|-0\,75-rem,12px)] items-start px-[var(--global-dimensions\/16-px-\|-1-rem,16px)] py-[16px] relative rounded-[8px] shrink-0 w-full" data-node-id="4643:27271" data-name="сheckbox-block">
+                    <div className="content-stretch flex gap-[12px] items-start relative shrink-0 w-full" data-node-id="I4643:27271;588:57" data-name="checkbox">
+                      <div className="h-[24px] relative shrink-0 w-[20px]" data-node-id="I4643:27271;588:57;173:7548" data-name="Wrapper">
+                        <div className="absolute bg-[var(--base\/base\/accent\/accent-primary\/base-accent-normal,#393b3e)] content-stretch flex items-center justify-center left-0 overflow-clip rounded-[var(--round\/round-xs,4px)] size-[20px] top-[2px]" data-node-id="I4643:27271;588:57;81:126" data-name="Checkbox">
+                          <div className="relative shrink-0 size-[20px]" data-node-id="I4643:27271;588:57;81:127" data-name="check-small-lined">
+                            <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCheckSmallLined} />
+                          </div>
+                        </div>
+                      </div>
+                      <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I4643:27271;588:57;85:220" data-name="Text">
+                        <div className="content-stretch flex gap-[4px] items-center relative shrink-0" data-node-id="I4643:27271;588:57;84:175" data-name="Label">
+                          <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/font-weight-400,normal)] font-normal leading-[var(--typography\/font-size\/body\/body-lg\/body-lg-font-line_height,24px)] overflow-hidden relative shrink-0 text-[16px] text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-ellipsis tracking-[var(--typography\/font-size\/body\/body-lg\/body-lg-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27271;588:57;84:176">
+                            Приглашение отправлено
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full" data-node-id="4643:27272" data-name="input-text-select">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-secondary\/text-secondary\/text-secondary-normal,#5a5e62)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27272;752:19229">
+                  Анкета ППС
+                </p>
+                <div className="border border-[var(--border\/normal\/border-normal,#cdcfd2)] border-solid content-stretch flex gap-[8px] h-[40px] items-center overflow-clip pl-[12px] pr-[8px] relative rounded-[var(--round\/round-sm,8px)] shrink-0 w-full" data-node-id="I4643:27272;752:19230" data-name="Field wrapper">
+                  <div className="relative shrink-0 size-[24px]" data-node-id="I4643:27272;752:19231" data-name="check-circle-fill-filled">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgCheckCircleFillFilled} />
+                  </div>
+                  <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I4643:27272;752:19232" data-name="Text Wrapper">
+                    <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="I4643:27272;752:19233" data-name="Field value">
+                      <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal leading-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-line_height,24px)] overflow-hidden relative shrink-0 text-[16px] text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-ellipsis tracking-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27272;752:19234">
+                        Заполнена
+                      </p>
+                    </div>
+                  </div>
+                  <ButtonSelect className="content-stretch flex items-start overflow-clip relative shrink-0 size-[24px]" />
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[4px] h-[160px] items-start relative shrink-0 w-full" data-node-id="4643:27273" data-name="input-text-area">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-secondary\/text-secondary\/text-secondary-normal,#5a5e62)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27273;824:23427">
+                  Заметки
+                </p>
+                <div className="border border-[var(--border\/normal\/border-normal,#cdcfd2)] border-solid content-stretch flex flex-[1_0_0] gap-[8px] items-start min-h-px overflow-clip pl-[12px] pr-[44px] py-[8px] relative rounded-[var(--round\/round-sm,8px)] w-full" data-node-id="I4643:27273;824:23428" data-name="Field wrapper">
+                  <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I4643:27273;824:23430" data-name="Text Wrapper">
+                    <div className="content-stretch flex items-start relative shrink-0 w-full" data-node-id="I4643:27273;824:23431" data-name="Field value">
+                      <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal leading-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-line_height,24px)] min-w-px relative text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-size,16px)] tracking-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-letter_spacing,0px)]" data-node-id="I4643:27273;824:23432">
+                        Большой важный текст о том, какой это хороший специалист
+                      </p>
+                    </div>
+                  </div>
+                  <div className="absolute bottom-[-1px] right-[-1px] size-[24px]" data-node-id="I4643:27273;824:23434" data-name="area">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArea} />
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full" data-node-id="4643:27274" data-name="input-date">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-secondary\/text-secondary\/text-secondary-normal,#5a5e62)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27274;754:23442">
+                  Дата выхода
+                </p>
+                <div className="border border-[var(--border\/normal\/border-normal,#cdcfd2)] border-solid content-stretch flex gap-[8px] h-[40px] items-center overflow-clip pl-[12px] pr-[8px] relative rounded-[var(--round\/round-sm,8px)] shrink-0 w-full" data-node-id="I4643:27274;754:23443" data-name="Field wrapper">
+                  <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I4643:27274;754:23444" data-name="Text Wrapper">
+                    <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="I4643:27274;754:23445" data-name="Field value">
+                      <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal leading-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-line_height,24px)] overflow-hidden relative shrink-0 text-[16px] text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-ellipsis tracking-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27274;754:23446">
+                        10.09.2026
+                      </p>
+                    </div>
+                  </div>
+                  <ButtonClear className="content-stretch flex items-start overflow-clip relative shrink-0 size-[24px]" />
+                  <ButtonDataTime className="content-stretch flex items-start overflow-clip relative shrink-0 size-[24px]" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col gap-[16px] items-center relative shrink-0 w-[836px]" data-node-id="4643:27275" data-name="block">
+            <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="4643:27276" data-name="heading">
+              <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-display,'Inter:Semi_Bold')] font-[var(--typography\/main-settings\/font-weight\/font-weight-600,normal)] font-semibold leading-[var(--typography\/font-size\/display\/display-xs\/display-xs-font-line_height,28px)] overflow-hidden relative shrink-0 text-[20px] text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-ellipsis tracking-[var(--typography\/font-size\/display\/display-xs\/display-xs-font-letter_spacing,0px)] w-full whitespace-nowrap" data-node-id="4643:27277">
+                Сотрудничество
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="4643:27278" data-name="list">
+              <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full" data-node-id="4643:27279" data-name="input-text-step">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-secondary\/text-secondary\/text-secondary-normal,#5a5e62)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27279;2042:659">
+                  Количество пар в неделю
+                </p>
+                <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="I4643:27279;2042:995" data-name="field+buttons">
+                  <div className="border border-[var(--border\/normal\/border-normal,#cdcfd2)] border-solid content-stretch flex flex-[1_0_0] gap-[8px] h-[40px] items-center min-w-px overflow-clip pl-[12px] pr-[8px] relative rounded-bl-[var(--round\/round-sm,8px)] rounded-tl-[var(--round\/round-sm,8px)]" data-node-id="I4643:27279;2042:660" data-name="Field wrapper">
+                    <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I4643:27279;2042:662" data-name="Text Wrapper">
+                      <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="I4643:27279;2042:663" data-name="Field value">
+                        <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal leading-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-line_height,24px)] overflow-hidden relative shrink-0 text-[16px] text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-ellipsis tracking-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27279;2042:664">
+                          10
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <div className="flex flex-row items-center self-stretch" data-node-id="I4643:27279;2043:612">
+                    <div className="content-stretch flex flex-col h-full items-start relative shrink-0 w-[32px]" data-name="stepper">
+                      <div className="border-[var(--border\/normal\/border-normal,#cdcfd2)] border-b-[length:var(--border\/border-sm,1px)] border-r-[length:var(--border\/border-sm,1px)] border-solid border-t-[length:var(--border\/border-sm,1px)] content-stretch flex flex-[1_0_0] gap-[var(--component\/button\/button-xs\/button-xs-gap-horizontal,4px)] items-center justify-center min-h-px px-[8px] py-[12px] relative rounded-tr-[var(--round\/round-sm,8px)] w-full" data-node-id="I4643:27279;2043:613" data-name="button-step">
+                        <div className="relative shrink-0 size-[18px]" data-node-id="I4643:27279;2043:613;2586:4483" data-name="plus-lined">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgPlusLined} />
+                        </div>
+                      </div>
+                      <div className="border-[var(--border\/normal\/border-normal,#cdcfd2)] border-b-[length:var(--border\/border-sm,1px)] border-r-[length:var(--border\/border-sm,1px)] border-solid content-stretch flex flex-[1_0_0] gap-[var(--component\/button\/button-xs\/button-xs-gap-horizontal,4px)] items-center justify-center min-h-px px-[8px] py-[12px] relative rounded-br-[var(--round\/round-sm,8px)] w-full" data-node-id="I4643:27279;2043:614" data-name="button-step">
+                        <div className="relative shrink-0 size-[18px]" data-node-id="I4643:27279;2043:614;2586:5237" data-name="minus-lined">
+                          <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgMinusLined} />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full" data-node-id="4643:27280" data-name="input-text-select">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-secondary\/text-secondary\/text-secondary-normal,#5a5e62)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27280;752:19229">
+                  Пожелания по расписанию
+                </p>
+                <div className="border border-[var(--border\/normal\/border-normal,#cdcfd2)] border-solid content-stretch flex gap-[8px] h-[40px] items-center overflow-clip pl-[12px] pr-[8px] relative rounded-[var(--round\/round-sm,8px)] shrink-0 w-full" data-node-id="I4643:27280;752:19230" data-name="Field wrapper">
+                  <div className="relative shrink-0 size-[24px]" data-node-id="I4643:27280;752:19231" data-name="clock-fill-filled">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgClockFillFilled} />
+                  </div>
+                  <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I4643:27280;752:19232" data-name="Text Wrapper">
+                    <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="I4643:27280;752:19233" data-name="Field value">
+                      <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal leading-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-line_height,24px)] overflow-hidden relative shrink-0 text-[16px] text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-ellipsis tracking-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27280;752:19234">
+                        На уточнении
+                      </p>
+                    </div>
+                  </div>
+                  <ButtonSelect className="content-stretch flex items-start overflow-clip relative shrink-0 size-[24px]" />
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[4px] items-start relative shrink-0 w-full" data-node-id="4643:27281" data-name="input-text-select">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-secondary\/text-secondary\/text-secondary-normal,#5a5e62)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27281;752:19229">
+                  История сотрудничества
+                </p>
+                <div className="border border-[var(--border\/normal\/border-normal,#cdcfd2)] border-solid content-stretch flex gap-[8px] h-[40px] items-center overflow-clip pl-[12px] pr-[8px] relative rounded-[var(--round\/round-sm,8px)] shrink-0 w-full" data-node-id="I4643:27281;752:19230" data-name="Field wrapper">
+                  <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I4643:27281;752:19232" data-name="Text Wrapper">
+                    <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="I4643:27281;752:19233" data-name="Field value">
+                      <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal leading-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-line_height,24px)] overflow-hidden relative shrink-0 text-[16px] text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-ellipsis tracking-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27281;752:19234">
+                        Новый
+                      </p>
+                    </div>
+                  </div>
+                  <ButtonSelect className="content-stretch flex items-start overflow-clip relative shrink-0 size-[24px]" />
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[4px] h-[160px] items-start relative shrink-0 w-full" data-node-id="4643:27282" data-name="input-text-area">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-secondary\/text-secondary\/text-secondary-normal,#5a5e62)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27282;824:23427">
+                  Комментарий по сотрудничеству
+                </p>
+                <div className="border border-[var(--border\/normal\/border-normal,#cdcfd2)] border-solid content-stretch flex flex-[1_0_0] gap-[8px] items-start min-h-px overflow-clip pl-[12px] pr-[44px] py-[8px] relative rounded-[var(--round\/round-sm,8px)] w-full" data-node-id="I4643:27282;824:23428" data-name="Field wrapper">
+                  <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I4643:27282;824:23430" data-name="Text Wrapper">
+                    <div className="content-stretch flex items-start relative shrink-0 w-full" data-node-id="I4643:27282;824:23431" data-name="Field value">
+                      <p className="[word-break:break-word] flex-[1_0_0] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal leading-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-line_height,24px)] min-w-px relative text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-[length:var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-size,16px)] tracking-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-letter_spacing,0px)]" data-node-id="I4643:27282;824:23432">
+                        Свободный ввод
+                      </p>
+                    </div>
+                  </div>
+                  <div className="absolute bottom-[-1px] right-[-1px] size-[24px]" data-node-id="I4643:27282;824:23434" data-name="area">
+                    <img alt="" className="absolute block inset-0 max-w-none size-full" src={imgArea} />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div className="content-stretch flex flex-col gap-[16px] items-center relative shrink-0 w-[836px]" data-node-id="4643:27283" data-name="block">
+            <div className="content-stretch flex flex-col items-start relative shrink-0 w-full" data-node-id="4643:27284" data-name="heading">
+              <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-display,'Inter:Semi_Bold')] font-[var(--typography\/main-settings\/font-weight\/font-weight-600,normal)] font-semibold leading-[var(--typography\/font-size\/display\/display-xs\/display-xs-font-line_height,28px)] overflow-hidden relative shrink-0 text-[20px] text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-ellipsis tracking-[var(--typography\/font-size\/display\/display-xs\/display-xs-font-letter_spacing,0px)] w-full whitespace-nowrap" data-node-id="4643:27285">
+                Контакты
+              </p>
+            </div>
+            <div className="content-stretch flex flex-col gap-[16px] items-start relative shrink-0 w-full" data-node-id="4643:27286" data-name="list">
+              <div className="content-stretch flex flex-col gap-[4px] h-[64px] items-start relative shrink-0 w-full" data-node-id="4643:27287" data-name="input-text">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-secondary\/text-secondary\/text-secondary-normal,#5a5e62)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27287;750:13029">
+                  Telegram
+                </p>
+                <div className="border border-[var(--border\/normal\/border-normal,#cdcfd2)] border-solid content-stretch flex flex-[1_0_0] gap-[8px] items-center min-h-px overflow-clip pl-[12px] pr-[8px] relative rounded-[var(--round\/round-sm,8px)] w-full" data-node-id="I4643:27287;750:13030" data-name="Field wrapper">
+                  <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I4643:27287;750:13032" data-name="Text Wrapper">
+                    <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="I4643:27287;750:13033" data-name="Field value">
+                      <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal leading-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-line_height,24px)] overflow-hidden relative shrink-0 text-[16px] text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-ellipsis tracking-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27287;750:13034">
+                        @alferov
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="content-stretch flex flex-col gap-[4px] h-[64px] items-start relative shrink-0 w-full" data-node-id="4643:27288" data-name="input-text">
+                <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/500,normal)] font-medium leading-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-secondary\/text-secondary\/text-secondary-normal,#5a5e62)] text-[length:var(--typography\/font-sizes\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-sizes\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27288;750:13029">
+                  Личная почта
+                </p>
+                <div className="border border-[var(--border\/normal\/border-normal,#cdcfd2)] border-solid content-stretch flex flex-[1_0_0] gap-[8px] items-center min-h-px overflow-clip pl-[12px] pr-[8px] relative rounded-[var(--round\/round-sm,8px)] w-full" data-node-id="I4643:27288;750:13030" data-name="Field wrapper">
+                  <div className="content-stretch flex flex-[1_0_0] flex-col items-start min-w-px relative" data-node-id="I4643:27288;750:13032" data-name="Text Wrapper">
+                    <div className="content-stretch flex items-center relative shrink-0 w-full" data-node-id="I4643:27288;750:13033" data-name="Field value">
+                      <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/content,'Inter:Regular')] font-[var(--typography\/main-settings\/font-weight\/400,normal)] font-normal leading-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-line_height,24px)] overflow-hidden relative shrink-0 text-[16px] text-[color:var(--text\/text-primary\/text-primary\/text-primary-normal,#1c1c1e)] text-ellipsis tracking-[var(--typography\/font-sizes\/body\/body-lg\/body-lg-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27288;750:13034">
+                        i.s.alferov@gmail.com
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <SpacerDeprecated className="h-[40px] max-h-[40px] min-h-[40px] relative shrink-0 w-full" size="40px | 2.5rem" />
+        <div className="content-stretch flex items-start justify-end relative shrink-0 w-[836px]" data-node-id="4643:27290" data-name="Actions">
+          <div className="bg-[var(--base\/base-accent\/accent-primary\/base-accent-normal,#323336)] content-stretch flex gap-[var(--component\/button\/button-sm\/button-sm-gap-horizontal,4px)] items-center justify-center overflow-clip pb-[var(--component\/button\/button-sm\/button-sm-padding-bottom,10px)] pl-[var(--component\/button\/button-sm\/button-sm-padding-left-text,16px)] pr-[var(--component\/button\/button-sm\/button-sm-padding-right-text,16px)] pt-[var(--component\/button\/button-sm\/button-sm-padding-top,10px)] relative rounded-[var(--component\/button\/button-sm\/button-sm-corner-radius,12px)] shrink-0" data-node-id="4643:27291" data-name="Secondary action-02">
+            <p className="[word-break:break-word] font-[family-name:var(--typography\/main-settings\/font-family\/font-family-content,'Inter:Medium')] font-[var(--typography\/main-settings\/font-weight\/font-weight-500,normal)] font-medium leading-[var(--typography\/font-size\/body\/body-md\/body-md-font-line_height,20px)] relative shrink-0 text-[color:var(--text\/text-primary\/text-primary-opposite\/text-primary-opposite-normal,white)] text-[length:var(--typography\/font-size\/body\/body-md\/body-md-font-size,14px)] tracking-[var(--typography\/font-size\/body\/body-md\/body-md-font-letter_spacing,0px)] whitespace-nowrap" data-node-id="I4643:27291;576:148">
+              Сохранить
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+SUPER CRITICAL: The generated React+Tailwind code MUST be converted to match the target project's technology stack and styling system.
+1. Analyze the target codebase to identify: technology stack, styling approach, component patterns, and design tokens
+2. Convert React syntax to the target framework/library
+3. Transform all Tailwind classes to the target styling system while preserving exact visual design
+4. Follow the project's existing patterns and conventions
+DO NOT install any Tailwind as a dependency unless the user instructs you to do so.
+
+Node ids have been added to the code as data attributes, e.g. `data-node-id="1:2"`.
+These styles are contained in the design: body/body-md/body-md-400: Font(family: "typography/main settings/font family/content", style: typography/main settings/font weight/400, size: typography/font sizes/body/body-md/body-md-font-size, weight: 400, lineHeight: typography/font sizes/body/body-md/body-md-font-line_height, letterSpacing: typography/font sizes/body/body-md/body-md-font-letter_spacing), body/body-md/body-md-500: Font(family: "typography/main-settings/font-family/font-family-content", style: typography/main-settings/font-weight/font-weight-500, size: typography/font-size/body/body-md/body-md-font-size, weight: 500, lineHeight: typography/font-size/body/body-md/body-md-font-line_height, letterSpacing: typography/font-size/body/body-md/body-md-font-letter_spacing), display/display-md/display-md-600: Font(family: "typography/main-settings/font-family/font-family-display", style: typography/main-settings/font-weight/font-weight-600, size: typography/font-size/display/display-md/display-md-font-size, weight: 600, lineHeight: typography/font-size/display/display-md/display-md-font-line_height, letterSpacing: typography/font-size/display/display-md/display-md-font-letter_spacing), display/display-xs/display-xs-600: Font(family: "typography/main-settings/font-family/font-family-display", style: typography/main-settings/font-weight/font-weight-600, size: typography/font-size/display/display-xs/display-xs-font-size, weight: 600, lineHeight: typography/font-size/display/display-xs/display-xs-font-line_height, letterSpacing: typography/font-size/display/display-xs/display-xs-font-letter_spacing), body/body-lg/body-lg-400: Font(family: "typography/main settings/font family/content", style: typography/main settings/font weight/400, size: typography/font sizes/body/body-lg/body-lg-font-size, weight: 400, lineHeight: typography/font sizes/body/body-lg/body-lg-font-line_height, letterSpacing: typography/font sizes/body/body-lg/body-lg-font-letter_spacing), Avatar/Male/Justin: , Avatar/Male/Jackson (with Background): #D7DFE9,.
+Component descriptions: The following components have usage descriptions or documentation links defined in Figma. These descriptions provide important context about the intended usage, best practices, and any constraints for each component. Follow these guidelines when implementing or using these components.
+
+## button-flat
+**Node ID:** 4378:89012
+
+**Tertiary кнопка** — это кнопка наименьшего приоритета, предназначенная для вспомогательных или контекстных действий. Она выглядит максимально ненавязчиво. Используется для второстепенных опций или действий, которые не требуют визуального акцента и не должны конкурировать с primary и secondary кнопками.
+
+## chevron-right
+**Node ID:** 2243:48178
+
+chevron, right
+
+## users-01-lined
+**Node ID:** 4726:8958
+
+users, persona, account, people, team
+
+## certificate-01
+**Node ID:** 3343:32219
+
+certificate, certification, badge, degree, document
+
+## certificate-01-lined
+**Node ID:** 4726:42907
+
+certificate, certification, badge, degree, document
+
+## graduation-hat-02
+**Node ID:** 4726:58521
+
+graduation hat, graduation, university, education, tertiary education
+
+## file-02
+**Node ID:** 3343:32325
+
+file, attachment, text, paper, pdf, report
+
+## calendar-plus-01
+**Node ID:** 3343:32342
+
+calendar, plus, add, date, booking
+
+## briefcase-01
+**Node ID:** 3344:9706
+
+briefcase, bag, travel
+
+## wallet-03-lined
+**Node ID:** 6123:15054
+
+wallet, purse, money
+
+## route-lined
+**Node ID:** 7441:29292
+
+route, map, direction
+
+## button-flat
+**Node ID:** 2630:22870
+
+**Tertiary кнопка** — это кнопка наименьшего приоритета, предназначенная для вспомогательных или контекстных действий. Она выглядит максимально ненавязчиво. Используется для второстепенных опций или действий, которые не требуют визуального акцента и не должны конкурировать с primary и secondary кнопками.
+
+## settings-01
+**Node ID:** 4:2492
+
+settings, preferences, cog
+
+## bell-01
+**Node ID:** 4:2494
+
+bell, notification, alert
+
+## chevron-down-lined
+**Node ID:** 4726:36872
+
+chevron, down, dropdown
+
+## check-small-lined
+**Node ID:** 7441:25348
+
+check, tick, confirm
+
+## check-circle-fill-filled
+**Node ID:** 4726:24803
+
+check, tick, confirm, checkbox, circle
+
+## x-lined
+**Node ID:** 4726:43721
+
+x, close, exit, remove, cross, delete
+
+## calendar-lined
+**Node ID:** 4726:43888
+
+calendar, date, booking
+
+## button-step
+**Node ID:** 4963:47999
+
+**Secondary кнопка** — это второстепенная кнопка, предназначенная для дополнительных или менее приоритетных действий по сравнению с основным. Она визуально менее заметна, чем primary кнопка, содержит краткий текст и используется для альтернативных вариантов, настроек или действий, не требующих немедленного внимания.
+
+## plus-lined
+**Node ID:** 4726:43146
+
+plus, add, addition, calculate, mathematics
+
+## minus-lined
+**Node ID:** 4726:17930
+
+minus, subtract, subtraction, mathematics, circle
+
+## clock-fill-filled
+**Node ID:** 4726:37243
+
+clock, timer, alarm, watch
+
+## button-filled
+**Node ID:** 5735:59919
+
+**Primary кнопка** — это основная кнопка интерфейса, предназначенная для ключевого действия на экране (например: __Сохранить__, __Отправить__, __Купить__). Она выделяется ярким контрастным цветом, заметнее второстепенных кнопок, содержит короткий глагол в повелительном наклонении и используется один раз на странице или блоке, чтобы привлечь внимание к главному действию
+The generated code contains image and SVG URL constants, e.g. const image = 'https://www.figma.com/api/mcp/asset/550e8400-e29b-41d4-a716-446655440000.png'. These URLs are temporary download sources and expire after 7 days. Download each asset into the project with curl -L, then replace its URL in the generated code with a reference to the downloaded asset. Never use the temporary URLs as runtime image sources.

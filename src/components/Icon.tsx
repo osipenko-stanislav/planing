@@ -1,0 +1,6 @@
+import assets from '../assets.json';
+const icons = {
+  user: '4643-26174-imgUser01Lined', structure: '4643-26174-imgBezierCurve03Lined', logo: '6955-140347-imgCuLogoRusShort', users: '6955-140347-imgUsers01', education: '6955-140347-imgGraduationHat02', briefcase: '6955-140347-imgBriefcase01', wallet: '6955-140347-imgWallet03Lined', route: '6955-140347-imgRouteLined', bell: '6955-140347-imgBell04', settings: '4643-26174-imgSettings01Lined', chevron: '6955-140347-imgChevronRight', search: '6955-140347-imgSearchSmLined', plus: '6955-140347-imgPlusLined', userCheck: '6955-140347-imgUserCheck01Lined', edit: '6718-11301-imgEdit04Lined', status: '4643-23444-imgStatus', check: '4643-27204-imgCheckCircleFillFilled', clock: '4643-27204-imgClockFillFilled',
+} as const;
+export function Icon({ name }: { name: keyof typeof icons }) { const key = icons[name] as keyof typeof assets; return <img className={`icon icon-${name}`} src={import.meta.env.BASE_URL + assets[key].replace(/^\//, '')} alt=""/>; }
+export function Avatar({ name, size = 40 }: { name: string; size?: number }) { return <span className="avatar" style={{ width: size, height: size }}>{name.split(' ').slice(0, 2).map(s => s[0]).join('')}</span>; }

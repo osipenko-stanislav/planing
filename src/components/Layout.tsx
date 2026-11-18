@@ -1,0 +1,22 @@
+import { useState } from 'react';
+import { Link, Outlet, useLocation, useMatches } from 'react-router-dom';
+import { useRepository } from '../data/repository';
+import { useFeedback } from './Feedback';
+import { Avatar, Icon } from './Icon';
+import { Button } from './ui/button';
+import { Dialog } from './ui/dialog';
+export function Layout() {
+  const { db, reset, warning } = useRepository();
+  const feedback = useFeedback();
+  const location = useLocation();
+  const matches = useMatches();
+  const [expanded, setExpanded] = useState(false);
+  const [settings, setSettings] = useState(false);
+  const [resetOpen, setResetOpen] = useState(false);
+  const person = db.people.find(p => location.pathname.startsWith(`/people/${p.id}`));
+  const courseId = new URLSearchParams(location.search).get('course');
+  const course = db.courses.find(c => (location.pathname === `/courses/${c.id}` || location.pathname === `/courses/${c.id}/edit`) || c.id === courseId);
+  const isHome = matches.at(-1)?.id === 'home';
+  const isCourseCreate = location.pathname === '/courses/new';
+  return <div className={expanded ? 'app sidebar-expanded' : 'app'}><aside className="sidebar"><Link to="/" aria-label="Кадровое планирование"><Icon name="logo"/></Link><Button variant="ghost" size="icon" aria-label={expanded ? 'Свернуть меню' : 'Развернуть меню'} onClick={() => setExpanded(!expanded)}><span className={expanded ? 'rotate' : ''}><Icon name="chevron"/></span></Button><nav aria-label="Основная навигация">{(['users', 'education', 'briefcase', 'wallet', 'route'] as const).map((icon, i) => <div key={icon}>{i === 2 ? <Link className="nav-item active" to="/" aria-label="Кадровое планирование" title="Кадровое планирование"><Icon name={icon}/>{expanded && <span>Кадровое планирование</span>}</Link> : <span className="nav-item nav-inactive" title="Раздел вне прототипа"><Icon name={icon}/>{expanded && <span>{['Сотрудники', 'Обучение', '', 'Выплаты', 'Маршруты'][i]}</span>}</span>}</div>)}</nav><Button className="prototype-menu" variant="ghost" size="icon" aria-label="Меню прототипа" title="Меню прототипа" onClick={() => setSettings(true)}>•••</Button></aside><div className="app-body"><header className="topbar"><div className="topbar-breadcrumbs">{isCourseCreate ? <nav className="breadcrumbs" aria-label="Хлебные крошки"><Link to="/">Кадровое планирование</Link><span>›</span><span aria-current="page">Добавить курс</span></nav> : (!isHome && <nav className="breadcrumbs" aria-label="Хлебные крошки"><Link to="/">Кадровое планирование</Link>{course && <><span>›</span><Link to={`/courses/${course.id}`}>{course.name}</Link></>}{person && <><span>›</span><Link to={`/people/${person.id}${course ? `?course=${course.id}` : ''}`}>{person.name}</Link></>}{location.pathname === '/people/new' && <><span>›</span><span aria-current="page">Добавить кандидата / сотрудника</span></>}{location.pathname.endsWith('/edit') && <><span>›</span><span>Редактировать</span></>}</nav>)}</div><div className="topbar-actions"><Button variant="ghost" size="icon" aria-label="Настройки" onClick={() => setSettings(true)}><Icon name="settings"/></Button><Button variant="ghost" size="icon" aria-label="Уведомления" onClick={() => feedback('Новых уведомлений нет')}><Icon name="bell"/></Button><img className="avatar" width="40" height="40" src={import.meta.env.BASE_URL + 'assets/4643-27204-imgSizeS40ContentPhotoBorderOff.png'} alt="Демо пользователь"/></div></header><main id="main" className={isHome ? 'page home-page' : 'page'}>{warning && <div className="warning" role="alert">{warning}</div>}<Outlet/></main></div><Dialog open={settings} onOpenChange={setSettings} title="Демонстрационный прототип" description="Все персональные данные вымышлены. Изменения сохраняются в этом браузере."><Button variant="outline" onClick={() => { setSettings(false); setResetOpen(true); }}>Восстановить демоданные</Button></Dialog><Dialog open={resetOpen} onOpenChange={setResetOpen} title="Восстановить демоданные?" description="Сохранённые в этом браузере изменения будут заменены исходными примерами."><div className="dialog-actions"><Button variant="outline" onClick={() => setResetOpen(false)}>Отмена</Button><Button onClick={() => { try { reset(); setResetOpen(false); feedback('Демоданные восстановлены'); } catch { feedback('Не удалось восстановить данные. Проверь доступ к хранилищу браузера.', true); } }}>Восстановить</Button></div></Dialog></div>;
+}

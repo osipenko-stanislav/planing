@@ -68,3 +68,4 @@
 .direction-group.is-collapsed .direction-row{background:#fff;border-bottom:1px solid var(--border);border-radius:0}.direction-group.is-collapsed .direction-toggle{font-size:24px}.direction-name{font-weight:600}
 .person-edit{margin-left:auto;opacity:0}.person-row:hover .person-edit,.person-row:focus-within .person-edit{opacity:1}
 .table-sort img,.header-sort-icon{width:16px;height:16px;display:block}.table-sort img{margin-left:2px}.direction-row{cursor:pointer}.direction-row:focus-within{outline:2px solid var(--link);outline-offset:-2px}
+.field-secondary{color:var(--text-tertiary);font-size:12px;line-height:16px}

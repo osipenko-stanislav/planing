@@ -65,3 +65,4 @@
 .home-dashboard{grid-template-columns:minmax(0,624px);margin-top:24px}.direction-group .course-name{padding-left:40px}.direction-row{border-radius:8px;padding-left:12px}.demo-help{color:var(--text-secondary);background:var(--pale);border-radius:8px;padding:12px;margin-bottom:24px;overflow-wrap:anywhere}.course-dashboard{grid-template-columns:minmax(0,727px)}.page>.dashboard-row{margin-top:24px}
 .semester-row .field-no-label{padding-top:24px}
 @media(max-width:767px){.semester-row .field-no-label{padding-top:0}}
+.direction-group.is-collapsed .direction-row{background:#fff;border-bottom:1px solid var(--border);border-radius:0}.direction-group.is-collapsed .direction-toggle{font-size:24px}.direction-name{font-weight:600}

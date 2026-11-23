@@ -1,0 +1,28 @@
+import { test, expect } from "@playwright/test";
+test.use({ channel: "chrome" });
+test("team positions synchronize demo data and preserve manual contacts", async ({ page }) => {
+  await page.goto("/courses/financial-math/edit");
+  await page.getByLabel("Лид курса", { exact: true }).fill("2");
+  await page.getByRole("button", { name: "Сохранить", exact: true }).click();
+  await page.getByRole("link", { name: "Кандидат не указан", exact: true }).first().click();
+  await page.getByRole("link", { name: "Редактировать данные" }).click();
+  const candy = page.getByLabel("Карточка кандидата в Candy *", { exact: true });
+  await candy.fill("https://candy.example/missing");
+  await page.getByLabel("Jira-таска по кандидату", { exact: true }).focus();
+  await expect(page.getByText("Карточка кандидата не найдена", { exact: true })).toBeVisible();
+  await candy.fill("https://candy.example/candidates/1");
+  await page.getByLabel("Jira-таска по кандидату", { exact: true }).fill("https://jira.example/browse/DEMO-1");
+  await page.getByLabel("Заявка на пропуск", { exact: true }).focus();
+  await expect(page.getByLabel("Статус найма", { exact: true })).toHaveValue("Оффер принят");
+  await expect(page.getByLabel("Кандидат", { exact: true })).toHaveAttribute("readonly", "");
+  await page.getByLabel("Личная почта", { exact: true }).fill("manual@example.com");
+  await page.getByRole("button", { name: "Сохранить", exact: true }).click();
+  await page.getByRole("link", { name: "Редактировать данные" }).click();
+  await expect(page.getByLabel("Личная почта", { exact: true })).toHaveValue("manual@example.com");
+  await page.getByLabel("Jira-таска по кандидату", { exact: true }).fill("https://jira.example/browse/DEMO-3");
+  await page.getByLabel("Заявка на пропуск", { exact: true }).focus();
+  await expect(page.getByLabel("Статус найма", { exact: true })).toHaveValue("Оформлен");
+  await page.getByRole("button", { name: "Сохранить", exact: true }).click();
+  await page.reload();
+  await expect(page.getByRole("heading", { name: "Ветров Артём Павлович", exact: true })).toBeVisible();
+});

@@ -27,11 +27,11 @@ export function createSeed(): Database {
       { id: 'web-development', directionIds: ['computer-science'], name: 'Современная веб-разработка', year: '2026', semester: 'Лето', levels: ['ДПО'], intake: '2026', launch: 'Новый', groups: 2, lectures: 2, seminars: 2, plan: { ...plan, 'Ассистент': 2 } },
     ],
     people: [
-      { ...emptyPerson, id: 'artem-vetrov', name: 'Ветров Артём Павлович', employeeId: 'staff-1', status: 'ТД', coordinatorId: 'staff-3', online: true, offline: true, questionnaire: 'Заполнена', notes: 'Готов вести лекции и участвовать в разработке программы курса.', startDate: '2026-09-10', pairs: '10', schedule: 'На уточнении', email: 'artem.vetrov@example.com', telegram: '@artem_demo', jiraUrl: 'https://example.com/tasks/demo-101', passUrl: 'https://example.com/passes/demo-101', contactsNew: false },
-      { ...emptyPerson, id: 'marina-lugovaya', name: 'Луговая Марина Игоревна', employeeId: 'staff-2', status: 'ГПД', coordinatorId: 'staff-3', questionnaire: 'Направлена', pairs: '4', history: 'Сотрудничал на этом курсе', email: 'marina.lugovaya@example.com', contactsNew: false },
-      { ...emptyPerson, id: 'kirill-berestov', name: 'Берестов Кирилл Максимович', status: 'На оформлении ТД', candyUrl: 'https://example.com/candidates/demo-103', coordinatorId: 'staff-4', telegram: '@kirill_demo', contactsNew: true },
-      { ...emptyPerson, id: 'alina-rodnikova', name: 'Родникова Алина Денисовна', status: 'Ожидает оформления', contactsNew: false },
-      { ...emptyPerson, id: 'timofey-ozersky', name: 'Озерский Тимофей Романович', employeeId: 'staff-3', status: 'Перевод на ТД', email: 'timofey.ozersky@example.com', contactsNew: false },
+      { ...emptyPerson, id: 'artem-vetrov', name: 'Ветров Артём Павлович', employeeId: 'staff-1', status: 'Оформлен', coordinatorId: 'staff-3', online: true, offline: true, questionnaire: 'Заполнена', notes: 'Готов вести лекции и участвовать в разработке программы курса.', startDate: '2026-09-10', pairs: '10', schedule: 'На уточнении', email: 'artem.vetrov@example.com', telegram: '@artem_demo', jiraUrl: 'https://example.com/tasks/demo-101', passUrl: 'https://example.com/passes/demo-101', contactsNew: false },
+      { ...emptyPerson, id: 'marina-lugovaya', name: 'Луговая Марина Игоревна', employeeId: 'staff-2', status: 'Оформлен', coordinatorId: 'staff-3', questionnaire: 'Направлена', pairs: '4', history: 'Сотрудничал на этом курсе', email: 'marina.lugovaya@example.com', contactsNew: false },
+      { ...emptyPerson, id: 'kirill-berestov', name: 'Берестов Кирилл Максимович', status: 'Трудоустройство', candyUrl: 'https://example.com/candidates/demo-103', coordinatorId: 'staff-4', telegram: '@kirill_demo', contactsNew: true },
+      { ...emptyPerson, id: 'alina-rodnikova', name: 'Родникова Алина Денисовна', status: 'Новый', contactsNew: false },
+      { ...emptyPerson, id: 'timofey-ozersky', name: 'Озерский Тимофей Романович', employeeId: 'staff-3', status: 'Оформлен', email: 'timofey.ozersky@example.com', contactsNew: false },
     ],
     assignments: [
       { id: 'a1', courseId: 'business-math', personId: 'artem-vetrov', role: 'Лектор' },

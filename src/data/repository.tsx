@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, type ReactNode } from 'react';
 import { createSeed } from './seed';
-import { hireStatuses, roles, type Database } from '../domain/model';
+import { emptyPerson, hireStatuses, roles, type Database } from '../domain/model';
 const KEY = 'cu-staff-planning:v1';
 function validDatabase(v: unknown): v is Database {
   if (!v || typeof v !== 'object') return false;
@@ -12,7 +12,7 @@ function validDatabase(v: unknown): v is Database {
     && d.assignments.every(a => d.people.some(p => p.id === a.personId) && d.courses.some(c => c.id === a.courseId) && roles.includes(a.role));
 }
 function load() {
-  try { const raw = localStorage.getItem(KEY); if (!raw) return { db: createSeed(), warning: '' }; const parsed: unknown = JSON.parse(raw); if (validDatabase(parsed)) return { db: parsed, warning: '' }; }
+  try { const raw = localStorage.getItem(KEY); if (!raw) return { db: createSeed(), warning: '' }; const parsed = JSON.parse(raw); if (parsed && Array.isArray(parsed.people)) parsed.people = parsed.people.map((p: Record<string, unknown>) => { const legacy = {'ТД':'Оформлен','ГПД':'Оформлен','Перевод на ТД':'Оформлен','На оформлении ТД':'Трудоустройство','На оформлении ГПД':'Трудоустройство','Отмена оформления':'Оформление отменено','Ожидает оформления':'Создан'} as Record<string,string>; return {...emptyPerson,...p,status:legacy[String(p.status)] || p.status}; }); if (validDatabase(parsed)) return { db: parsed, warning: '' }; }
   catch { /* Keep unreadable storage intact until an explicit successful save/reset. */ }
   return { db: createSeed(), warning: 'Не удалось прочитать сохранённые данные. Открыта демоверсия. Можно восстановить исходные данные в меню прототипа.' };
 }

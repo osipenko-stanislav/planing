@@ -1,5 +1,6 @@
 import { emptyPerson, type Database, type Role } from '../domain/model';
 const plan: Record<Role, number> = { 'Лид курса': 1, 'Автор курса': 1, 'Лектор': 2, 'Семинарист': 2, 'Ассистент': 1 };
+const demoCourses = (prefix: string, directionId: string, label: string) => Array.from({ length: 18 }, (_, index) => ({ id: `${prefix}-${index + 1}`, directionIds: [directionId], name: `Демо ${label} ${index + 1}`, year: index % 2 ? '2025' : '2026', semester: index % 2 ? 'Весна' : 'Осень', levels: [index % 3 ? 'БАК' : 'МАГ'], intake: '2026', launch: 'Новый', groups: 1, lectures: 1, seminars: 1, plan: { ...plan } }));
 export function createSeed(): Database {
   return {
     version: 1,
@@ -16,6 +17,8 @@ export function createSeed(): Database {
       { id: 'business', name: 'Бизнес и управление', team: { 'Лид направления': 'staff-2', 'HRBP': 'staff-4', 'Координатор ОП': 'staff-1', 'Рекрутер': 'staff-5', 'Менеджер ФК': 'staff-3' } },
     ],
     courses: [
+      ...demoCourses('math-demo', 'mathematics', 'курс математики'),
+      ...demoCourses('cs-demo', 'computer-science', 'курс программирования'),
       { id: 'business-math', directionIds: ['mathematics'], name: 'Бизнес математика', year: '2026', semester: 'Осень', levels: ['МАГ', 'БАК'], intake: '2025, 2026', launch: 'Новый', groups: 5, lectures: 8, seminars: 2, plan: { ...plan } },
       { id: 'databases', directionIds: ['computer-science'], name: 'Базы данных', year: '2026', semester: 'Осень', levels: ['ДПО'], intake: '2026', launch: 'Повторный', groups: 3, lectures: 2, seminars: 2, plan: { ...plan, 'Лектор': 1 } },
       { id: 'financial-math', directionIds: ['mathematics'], name: 'Финансовая математика', year: '2026', semester: 'Весна', levels: ['МАГ'], intake: '2024, 2025', launch: 'Новый', groups: 5, lectures: 8, seminars: 2, plan: { ...plan } },

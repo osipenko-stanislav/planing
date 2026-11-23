@@ -1,5 +1,5 @@
 import { emptyPerson, type Database, type Role } from '../domain/model';
-const plan: Record<Role, number> = { 'Лид курса': 1, 'Автор курса': 1, 'Лектор': 2, 'Семинарист': 2, 'Ассистент': 1 };
+const plan: Record<Role, number> = { 'Лид курса': 1, 'Автор курса': 0, 'Лектор': 0, 'Семинарист': 0, 'Ассистент': 0 };
 const demoCourses = (prefix: string, directionId: string, label: string) => Array.from({ length: 18 }, (_, index) => ({ id: `${prefix}-${index + 1}`, directionIds: [directionId], name: `Демо ${label} ${index + 1}`, year: index % 2 ? '2025' : '2026', semester: index % 2 ? 'Весна' : 'Осень', levels: [index % 3 ? 'БАК' : 'МАГ'], intake: '2026', launch: 'Новый', groups: 1, lectures: 1, seminars: 1, plan: { ...plan } }));
 export function createSeed(): Database {
   return {

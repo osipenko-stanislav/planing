@@ -66,3 +66,4 @@
 .semester-row .field-no-label{padding-top:24px}
 @media(max-width:767px){.semester-row .field-no-label{padding-top:0}}
 .direction-group.is-collapsed .direction-row{background:#fff;border-bottom:1px solid var(--border);border-radius:0}.direction-group.is-collapsed .direction-toggle{font-size:24px}.direction-name{font-weight:600}
+.person-edit{margin-left:auto;opacity:0}.person-row:hover .person-edit,.person-row:focus-within .person-edit{opacity:1}
